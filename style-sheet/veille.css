@@ -139,8 +139,6 @@ h2 {
     transform: scale(1.05);
 }
 
-
-
 /* Conteneur des articles */
 .articles-container {
     display: grid;
@@ -159,6 +157,7 @@ h2 {
     background: #e5e7e6;
     padding: 20px;
     border-radius: 8px;
+    border: 1px solid rgba(183, 115, 50, 0.5); /* Bordure subtile ajoutée */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -179,7 +178,6 @@ h2 {
     color: #333;
     line-height: 1.6;
 }
-
 
 /* Années de veille */
 .year-container {

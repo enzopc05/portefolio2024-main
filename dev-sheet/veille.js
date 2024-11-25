@@ -24,3 +24,18 @@ function sortArticles(criteria) {
     articlesContainer.innerHTML = "";
     articles.forEach((article) => articlesContainer.appendChild(article));
 }
+
+document.querySelectorAll('.toggle-detail').forEach(button => {
+    button.addEventListener('click', function () {
+        const popup = document.getElementById('popup');
+        const summary = this.getAttribute('data-summary');
+
+        document.getElementById('popupSummary').textContent = summary;
+        popup.classList.remove('hidden');
+    });
+});
+
+document.getElementById('closePopup').addEventListener('click', function () {
+    document.getElementById('popup').classList.add('hidden');
+});
+
