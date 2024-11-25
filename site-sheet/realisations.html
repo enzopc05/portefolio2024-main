@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Réalisations - Enzo Pace</title>
+    <link rel="stylesheet" href="../style-sheet/realisations.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- En-tête avec le menu de navigation -->
+<header>
+    <div class="container">
+        <h1>Mes Réalisations</h1>
+        <nav>
+            <ul>
+                <li><a href="accueil.html">Accueil</a></li>
+                <li><a href="entreprise.html">Entreprise</a></li>
+                <li><a href="realisations.html">Réalisations</a></li>
+                <li><a href="veille.html">Veille</a></li>
+                <li><a href="bilan.html">Bilan</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Section principale des réalisations -->
+<main>
+    <div class="container">
+        <!-- Réalisations École -->
+        <section id="realisations-ecole">
+            <h2 class="section-title">Réalisations École</h2>
+
+            <!-- Conteneur des projets école -->
+            <div class="projects-container">
+                <article class="project">
+                    <h3>Projet École 1</h3>
+                    <img src="path/to/project-ecole1.jpg" alt="Image du projet école 1" />
+                    <p>Brève description du projet réalisé à l'école.</p>
+                    <button class="btn" data-modal="modal1">En savoir plus</button>
+                </article>
+
+                <article class="project">
+                    <h3>Projet École 2</h3>
+                    <img src="path/to/project-ecole2.jpg" alt="Image du projet école 2" />
+                    <p>Brève description du projet réalisé à l'école.</p>
+                    <button class="btn" data-modal="modal2">En savoir plus</button>
+                </article>
+            </div>
+        </section>
+
+        <!-- Réalisations Entreprise -->
+        <section id="realisations-entreprise">
+            <h2 class="section-title">Réalisations Entreprise</h2>
+
+            <!-- Conteneur des projets entreprise -->
+            <div class="projects-container">
+                <article class="project">
+                    <h3>Projet Entreprise 1</h3>
+                    <img src="path/to/project-entreprise1.jpg" alt="Image du projet entreprise 1" />
+                    <p>Brève description du projet réalisé en entreprise.</p>
+                    <button class="btn" data-modal="modal3">En savoir plus</button>
+                </article>
+
+                <article class="project">
+                    <h3>Projet Entreprise 2</h3>
+                    <img src="path/to/project-entreprise2.jpg" alt="Image du projet entreprise 2" />
+                    <p>Brève description du projet réalisé en entreprise.</p>
+                    <button class="btn" data-modal="modal4">En savoir plus</button>
+                </article>
+            </div>
+        </section>
+    </div>
+</main>
+
+<!-- Modale pour Projet École 1 -->
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Détails du Projet École 1</h2>
+        <!-- Informations supplémentaires -->
+        <div class="project-info">
+            <!-- Participants -->
+            <div class="project-detail">
+                <img src="../picture/equipe-removebg-preview.png" alt="Participants" class="icon">
+                <p>3 Participants</p>
+            </div>
+            <!-- Technologies utilisées -->
+            <div class="project-detail">
+                <img src="../picture/ordi-removebg-preview.png" alt="Technologies" class="icon">
+                <div class="languages-used">
+                    <img src="../picture/pythonlogo-removebg-preview.png" alt="Python Logo" class="language-logo">
+                    <img src="../picture/jslogo.jpg" alt="JavaScript Logo" class="language-logo">
+                    <img src="../picture/htmllogo-removebg-preview.png" alt="HTML Logo" class="language-logo">
+                </div>
+            </div>
+            <!-- Durée du projet -->
+            <div class="project-detail">
+                <img src="../picture/horlogelogo-removebg-preview.png" alt="Durée" class="icon">
+                <p>3 mois</p>
+            </div>
+        </div>
+        <p>Informations détaillées sur le projet réalisé à l'école.</p>
+    </div>
+</div>
+
+<!-- Modale pour Projet École 2 -->
+<div id="modal2" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Détails du Projet École 2</h2>
+        <div class="project-info">
+            <!-- Participants -->
+            <div class="project-detail">
+                <img src="../picture/equipe-removebg-preview.png" alt="Participants" class="icon">
+                <p>4 Participants</p>
+            </div>
+            <!-- Technologies utilisées -->
+            <div class="project-detail">
+                <img src="../picture/ordi-removebg-preview.png" alt="Technologies" class="icon">
+                <div class="languages-used">
+                    <img src="../picture/csslogo-removebg-preview.png" alt="CSS Logo" class="language-logo">
+                    <img src="../picture/javalogo-removebg-preview.png" alt="Java Logo" class="language-logo">
+                </div>
+            </div>
+            <!-- Durée du projet -->
+            <div class="project-detail">
+                <img src="../picture/horlogelogo-removebg-preview.png" alt="Durée" class="icon">
+                <p>4 mois</p>
+            </div>
+        </div>
+        <p>Informations détaillées sur le projet réalisé à l'école.</p>
+    </div>
+</div>
+
+<!-- Modale pour Projet Entreprise 1 -->
+<div id="modal3" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Détails du Projet Entreprise 1</h2>
+        <div class="project-info">
+            <!-- Participants -->
+            <div class="project-detail">
+                <img src="../picture/equipe-removebg-preview.png" alt="Participants" class="icon">
+                <p>5 Participants</p>
+            </div>
+            <!-- Technologies utilisées -->
+            <div class="project-detail">
+                <img src="../picture/ordi-removebg-preview.png" alt="Technologies" class="icon">
+                <div class="languages-used">
+                    <img src="../picture/sqllogo-removebg-preview.png" alt="SQL Logo" class="language-logo">
+                    <img src="../picture/phplogo-removebg-preview.png" alt="PHP Logo" class="language-logo">
+                </div>
+            </div>
+            <!-- Durée du projet -->
+            <div class="project-detail">
+                <img src="../picture/horlogelogo-removebg-preview.png" alt="Durée" class="icon">
+                <p>6 mois</p>
+            </div>
+        </div>
+        <p>Informations détaillées sur le projet réalisé en entreprise.</p>
+    </div>
+</div>
+
+<!-- Modale pour Projet Entreprise 2 -->
+<div id="modal4" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Détails du Projet Entreprise 2</h2>
+        <div class="project-info">
+            <!-- Participants -->
+            <div class="project-detail">
+                <img src="../picture/equipe-removebg-preview.png" alt="Participants" class="icon">
+                <p>2 Participants</p>
+            </div>
+            <!-- Technologies utilisées -->
+            <div class="project-detail">
+                <img src="../picture/ordi-removebg-preview.png" alt="Technologies" class="icon">
+                <div class="languages-used">
+                    <img src="../picture/pythonlogo-removebg-preview.png" alt="Python Logo" class="language-logo">
+                    <img src="../picture/githublogo-removebg-preview.png" alt="GitHub Logo" class="language-logo">
+                </div>
+            </div>
+            <!-- Durée du projet -->
+            <div class="project-detail">
+                <img src="../picture/horlogelogo-removebg-preview.png" alt="Durée" class="icon">
+                <p>2 mois</p>
+            </div>
+        </div>
+        <p>Informations détaillées sur le projet réalisé en entreprise.</p>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <!-- Section des informations personnelles (email et téléphone) -->
+        <div class="contact-info">
+            <p><strong>Email :</strong> <a href="mailto:enzopace05@gmail.com">enzopace05@gmail.com</a></p>
+            <p><strong>Téléphone :</strong> 06 16 25 49 14</p>
+        </div>
+        
+        <!-- Section des icônes sociales -->
+        <div class="social-icons">
+            <a href="https://linkedin.com" target="_blank"><img src="../picture/logo-linkedin-noir.jpg" alt="LinkedIn"></a>
+            <a href="https://www.instagram.com/enzo.sunchine/profilecard/?igsh=bHphdDNjeHd3aHdj" target="_blank"><img src="../picture/logo-instagram-noir-png.jpg" alt="Instagram"></a>
+            <a href="https://github.com/enzopc05" target="_blank"><img src="../picture/githublogo-removebg-preview.png" alt="GitHub"></a>
+        </div>
+
+        <!-- Section Copyright -->
+        <p>© Enzo Pace 2024</p>
+    </div>
+</footer>
+
+<!-- Script pour gérer les modales -->
+<script src="../dev-sheet/realisations.js"></script>
+
+</body>
+</html>
