@@ -143,6 +143,23 @@ h2 {
     margin: 0;
 }
 
+/* Logos des entreprises */
+.year-box img {
+    max-width: 100px; /* Limite la largeur maximale du logo */
+    height: auto; /* Maintient les proportions originales */
+    margin: 10px auto; /* Centre le logo avec des marges verticales */
+    display: block; /* Assure que le logo reste centré */
+    border-radius: 8px; /* Arrondit légèrement les coins pour correspondre au style des encadrés */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajoute une légère ombre pour un meilleur rendu */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.year-box img:hover {
+    transform: scale(1.1); /* Zoom léger au survol */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Accentue l'ombre au survol */
+}
+
+
 /* Style du footer */
 footer {
     background-color: #DAAB3A; /* Jaune doré */
