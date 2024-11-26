@@ -179,6 +179,16 @@ h2 {
     line-height: 1.6;
 }
 
+.article img {
+    width: 100%; /* L'image prend 100% de la largeur du conteneur */
+    height: auto; /* Maintient le ratio d'aspect de l'image */
+    max-height: 200px; /* Limite la hauteur maximale de l'image */
+    object-fit: cover; /* Coupe l'image pour remplir le conteneur si nécessaire */
+    border-radius: 8px; /* Garde les coins arrondis */
+    margin-bottom: 15px;
+}
+
+
 /* Années de veille */
 .year-container {
     display: flex;
