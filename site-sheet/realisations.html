@@ -1,220 +1,437 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Réalisations - Enzo Pace</title>
-    <link rel="stylesheet" href="../style-sheet/realisations.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-</head>
-<body>
 
-<!-- En-tête avec le menu de navigation -->
-<header>
-    <div class="container">
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+    <title>Réalisations - Enzo Pace</title>
+    <link href="../style-sheet/realisations.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- En-tête avec le menu de navigation -->
+    <header>
+      <div class="container">
         <h1>Mes Réalisations</h1>
         <nav>
-            <ul>
-                <li><a href="accueil.html">Accueil</a></li>
-                <li><a href="entreprise.html">Entreprise</a></li>
-                <li><a href="realisations.html">Réalisations</a></li>
-                <li><a href="veille.html">Veille</a></li>
-                <li><a href="bilan.html">Bilan</a></li>
-            </ul>
+          <ul>
+            <li><a href="accueil.html">Accueil</a></li>
+            <li><a href="entreprise.html">Entreprise</a></li>
+            <li><a href="realisations.html">Réalisations</a></li>
+            <li><a href="veille.html">Veille</a></li>
+            <li><a href="bilan.html">Bilan</a></li>
+          </ul>
         </nav>
-    </div>
-</header>
-
-<!-- Section principale des réalisations -->
-<main>
-    <div class="container">
+      </div>
+    </header>
+    <!-- Section principale des réalisations -->
+    <main>
+      <div class="container">
         <!-- Réalisations École -->
         <section id="realisations-ecole">
-            <h2 class="section-title">Réalisations École</h2>
-
-            <!-- Conteneur des projets école -->
-            <div class="projects-container">
-                <article class="project">
-                    <h3>API Marvel</h3>
-                    <img src="../picture/projetecole1.png" alt="Image du projet école 1" />
-                    <p>Requête à l'API Marvel afin d'avoir des résultats visuels</p>
-                    <button class="btn" data-modal="modal1">En savoir plus</button>
-                </article>
-
-                <article class="project">
-                    <h3>Projet École 2</h3>
-                    <img src="path/to/project-ecole2.jpg" alt="Image du projet école 2" />
-                    <p>Brève description du projet réalisé à l'école.</p>
-                    <button class="btn" data-modal="modal2">En savoir plus</button>
-                </article>
-            </div>
+          <h2 class="section-title">Réalisations École</h2>
+          <!-- Conteneur des projets école -->
+          <div class="projects-container">
+            <article class="project">
+              <h3>API Marvel</h3>
+              <img
+                alt="Image du projet école 1"
+                src="../picture/projetecole1.png"
+              />
+              <p>Requête à l'API Marvel afin d'avoir des résultats visuels</p>
+              <button class="btn" data-modal="modal1">En savoir plus</button>
+            </article>
+            <article class="project">
+              <h3>Projet École 2</h3>
+              <img
+                alt="Image du projet école 2"
+                src="path/to/project-ecole2.jpg"
+              />
+              <p>Brève description du projet réalisé à l'école.</p>
+              <button class="btn" data-modal="modal2">En savoir plus</button>
+            </article>
+          </div>
         </section>
-
         <!-- Réalisations Entreprise -->
         <section id="realisations-entreprise">
-            <h2 class="section-title">Réalisations Entreprise</h2>
-
-            <!-- Conteneur des projets entreprise -->
-            <div class="projects-container">
-                <article class="project">
-                    <h3>Macro EXCEL</h3>
-                    <img src="../picture/projetentreprise1.png" alt="Image du projet entreprise 1" />
-                    <p>Amélioration d'une macro EXCEL</p>
-                    <button class="btn" data-modal="modal3">En savoir plus</button>
-                </article>
-
-                <article class="project">
-                    <h3>API Amazon</h3>
-                    <img src="../picture/amazonprojetentreprise2.png" alt="Image du projet entreprise 2" />
-                    <p>Connexion et requête à l'API Amazon</p>
-                    <button class="btn" data-modal="modal4">En savoir plus</button>
-                </article>
-            </div>
+          <h2 class="section-title">Réalisations Entreprise</h2>
+          <!-- Conteneur des projets entreprise -->
+          <div class="projects-container">
+            <article class="project">
+              <h3>Macro EXCEL</h3>
+              <img
+                alt="Image du projet entreprise 1"
+                src="../picture/projetentreprise1.png"
+              />
+              <p>Amélioration d'une macro EXCEL</p>
+              <button class="btn" data-modal="modal3">En savoir plus</button>
+            </article>
+            <article class="project">
+              <h3>API Amazon</h3>
+              <img
+                alt="Image du projet entreprise 2"
+                src="../picture/amazonprojetentreprise2.png"
+              />
+              <p>Connexion et requête à l'API Amazon</p>
+              <button class="btn" data-modal="modal4">En savoir plus</button>
+            </article>
+          </div>
         </section>
-    </div>
-</main>
-
-<!-- Modale pour Projet École 1 -->
-<div id="modal1" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
+      </div>
+    </main>
+    <!-- Modale pour Projet École 1 -->
+    <div class="modal" id="modal1">
+      <div class="modal-content">
+        <span class="close">×</span>
         <h2>Détails du Projet</h2>
         <!-- Informations supplémentaires -->
         <div class="project-info">
-            <!-- Participants -->
-            <div class="project-detail">
-                <img src="../picture/equipe-removebg-preview.png" alt="Participants" class="icon">
-                <p>4 Participants</p>
+          <!-- Participants -->
+          <div class="project-detail">
+            <img
+              alt="Participants"
+              class="icon"
+              src="../picture/equipe-removebg-preview.png"
+            />
+            <p>4 Participants</p>
+          </div>
+          <!-- Technologies utilisées -->
+          <div class="project-detail">
+            <img
+              alt="Technologies"
+              class="icon"
+              src="../picture/ordi-removebg-preview.png"
+            />
+            <div class="languages-used">
+              <img
+                alt="Python Logo"
+                class="language-logo"
+                src="../picture/pythonlogo-removebg-preview.png"
+              />
+              <img
+                alt="JavaScript Logo"
+                class="language-logo"
+                src="../picture/jslogo.jpg"
+              />
+              <img
+                alt="HTML Logo"
+                class="language-logo"
+                src="../picture/htmllogo-removebg-preview.png"
+              />
             </div>
-            <!-- Technologies utilisées -->
-            <div class="project-detail">
-                <img src="../picture/ordi-removebg-preview.png" alt="Technologies" class="icon">
-                <div class="languages-used">
-                    <img src="../picture/pythonlogo-removebg-preview.png" alt="Python Logo" class="language-logo">
-                    <img src="../picture/jslogo.jpg" alt="JavaScript Logo" class="language-logo">
-                    <img src="../picture/htmllogo-removebg-preview.png" alt="HTML Logo" class="language-logo">
-                </div>
-            </div>
-            <!-- Durée du projet -->
-            <div class="project-detail">
-                <img src="../picture/horlogelogo-removebg-preview.png" alt="Durée" class="icon">
-                <p>En cours de Septembre à Décembre</p>
-            </div>
+          </div>
+          <!-- Durée du projet -->
+          <div class="project-detail">
+            <img
+              alt="Durée"
+              class="icon"
+              src="../picture/horlogelogo-removebg-preview.png"
+            />
+            <p>En cours de Septembre à Décembre</p>
+          </div>
         </div>
         <p>Informations détaillées sur le projet réalisé à l'école.</p>
+        <div class="documents-section">
+          <h3>Accéder aux Documents</h3>
+          <p>
+            Veuillez entrer le mot de passe pour accéder aux documents liés à ce
+            projet.
+          </p>
+          <input
+            id="password_modal1"
+            placeholder="Mot de passe"
+            type="password"
+          /><button
+            onclick="validatePassword('password_modal1', 'docs_modal1')"
+          >
+            Valider
+          </button>
+          <div id="docs_modal1" style="display: none; margin-top: 20px">
+            <h4>Documents disponibles</h4>
+            <p>
+              <a href="path/to/modal1_doc1.pdf" target="_blank"
+                >Télécharger le document 1 - API Marvel</a
+              >
+            </p>
+            <p>
+              <a href="path/to/modal1_doc2.pdf" target="_blank"
+                >Télécharger le document 2 - API Marvel</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
-
-<!-- Modale pour Projet École 2 -->
-<div id="modal2" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
+    <!-- Modale pour Projet École 2 -->
+    <div class="modal" id="modal2">
+      <div class="modal-content">
+        <span class="close">×</span>
         <h2>Détails du Projet</h2>
         <div class="project-info">
-            <!-- Participants -->
-            <div class="project-detail">
-                <img src="../picture/equipe-removebg-preview.png" alt="Participants" class="icon">
-                <p>4 Participants</p>
+          <!-- Participants -->
+          <div class="project-detail">
+            <img
+              alt="Participants"
+              class="icon"
+              src="../picture/equipe-removebg-preview.png"
+            />
+            <p>4 Participants</p>
+          </div>
+          <!-- Technologies utilisées -->
+          <div class="project-detail">
+            <img
+              alt="Technologies"
+              class="icon"
+              src="../picture/ordi-removebg-preview.png"
+            />
+            <div class="languages-used">
+              <img
+                alt="CSS Logo"
+                class="language-logo"
+                src="../picture/csslogo-removebg-preview.png"
+              />
+              <img
+                alt="Java Logo"
+                class="language-logo"
+                src="../picture/javalogo-removebg-preview.png"
+              />
             </div>
-            <!-- Technologies utilisées -->
-            <div class="project-detail">
-                <img src="../picture/ordi-removebg-preview.png" alt="Technologies" class="icon">
-                <div class="languages-used">
-                    <img src="../picture/csslogo-removebg-preview.png" alt="CSS Logo" class="language-logo">
-                    <img src="../picture/javalogo-removebg-preview.png" alt="Java Logo" class="language-logo">
-                </div>
-            </div>
-            <!-- Durée du projet -->
-            <div class="project-detail">
-                <img src="../picture/horlogelogo-removebg-preview.png" alt="Durée" class="icon">
-                <p>4 mois</p>
-            </div>
+          </div>
+          <!-- Durée du projet -->
+          <div class="project-detail">
+            <img
+              alt="Durée"
+              class="icon"
+              src="../picture/horlogelogo-removebg-preview.png"
+            />
+            <p>4 mois</p>
+          </div>
         </div>
         <p>Informations détaillées sur le projet réalisé à l'école.</p>
+        <div class="documents-section">
+          <h3>Accéder aux Documents</h3>
+          <p>
+            Veuillez entrer le mot de passe pour accéder aux documents liés à ce
+            projet.
+          </p>
+          <input
+            id="password_modal2"
+            placeholder="Mot de passe"
+            type="password"
+          /><button
+            onclick="validatePassword('password_modal2', 'docs_modal2')"
+          >
+            Valider
+          </button>
+          <div id="docs_modal2" style="display: none; margin-top: 20px">
+            <h4>Documents disponibles</h4>
+            <p>
+              <a href="path/to/modal2_doc1.pdf" target="_blank"
+                >Télécharger le document 1 - Projet École 2</a
+              >
+            </p>
+            <p>
+              <a href="path/to/modal2_doc2.pdf" target="_blank"
+                >Télécharger le document 2 - Projet École 2</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
-
-<!-- Modale pour Projet Entreprise 1 -->
-<div id="modal3" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
+    <!-- Modale pour Projet Entreprise 1 -->
+    <div class="modal" id="modal3">
+      <div class="modal-content">
+        <span class="close">×</span>
         <h2>Détails du Projet</h2>
         <div class="project-info">
-            <!-- Participants -->
-            <div class="project-detail">
-                <img src="../picture/equipe-removebg-preview.png" alt="Participants" class="icon">
-                <p>1 Participants</p>
+          <!-- Participants -->
+          <div class="project-detail">
+            <img
+              alt="Participants"
+              class="icon"
+              src="../picture/equipe-removebg-preview.png"
+            />
+            <p>1 Participants</p>
+          </div>
+          <!-- Technologies utilisées -->
+          <div class="project-detail">
+            <img
+              alt="Technologies"
+              class="icon"
+              src="../picture/ordi-removebg-preview.png"
+            />
+            <div class="languages-used">
+              <img
+                alt="VBA Logo"
+                class="language-logo"
+                src="../picture/vbalogo-removebg-preview.png "
+              />
             </div>
-            <!-- Technologies utilisées -->
-            <div class="project-detail">
-                <img src="../picture/ordi-removebg-preview.png" alt="Technologies" class="icon">
-                <div class="languages-used">
-                    <img src="../picture/vbalogo-removebg-preview.png " alt="VBA Logo" class="language-logo">
-                </div>
-            </div>
-            <!-- Durée du projet -->
-            <div class="project-detail">
-                <img src="../picture/horlogelogo-removebg-preview.png" alt="Durée" class="icon">
-                <p>1 semaine</p>
-            </div>
+          </div>
+          <!-- Durée du projet -->
+          <div class="project-detail">
+            <img
+              alt="Durée"
+              class="icon"
+              src="../picture/horlogelogo-removebg-preview.png"
+            />
+            <p>1 semaine</p>
+          </div>
         </div>
-        <p>Ce projet consiste à développer une macro VBA permettant d'extraire et de présenter des données depuis une base de données SQL dans un tableau Excel. L'objectif principal est de simplifier l'accès aux informations critiques relatives aux articles et de les rendre facilement exploitables par les utilisateurs via un fichier Excel.</p>
+        <p>
+          Ce projet consiste à développer une macro VBA permettant d'extraire et
+          de présenter des données depuis une base de données SQL dans un
+          tableau Excel. L'objectif principal est de simplifier l'accès aux
+          informations critiques relatives aux articles et de les rendre
+          facilement exploitables par les utilisateurs via un fichier Excel.
+        </p>
+        <div class="documents-section">
+          <h3>Accéder aux Documents</h3>
+          <p>
+            Veuillez entrer le mot de passe pour accéder aux documents liés à ce
+            projet.
+          </p>
+          <input
+            id="password_modal3"
+            placeholder="Mot de passe"
+            type="password"
+          /><button
+            onclick="validatePassword('password_modal3', 'docs_modal3')"
+          >
+            Valider
+          </button>
+          <div id="docs_modal3" style="display: none; margin-top: 20px">
+            <h4>Documents disponibles</h4>
+            <p>
+              <a href="path/to/modal3_doc1.pdf" target="_blank"
+                >Télécharger le document 1 - Macro EXCEL</a
+              >
+            </p>
+            <p>
+              <a href="path/to/modal3_doc2.pdf" target="_blank"
+                >Télécharger le document 2 - Macro EXCEL</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
-
-<!-- Modale pour Projet Entreprise 2 -->
-<div id="modal4" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
+    <!-- Modale pour Projet Entreprise 2 -->
+    <div class="modal" id="modal4">
+      <div class="modal-content">
+        <span class="close">×</span>
         <h2>Détails du Projet Entreprise 2</h2>
         <div class="project-info">
-            <!-- Participants -->
-            <div class="project-detail">
-                <img src="../picture/equipe-removebg-preview.png" alt="Participants" class="icon">
-                <p>1 Participants</p>
+          <!-- Participants -->
+          <div class="project-detail">
+            <img
+              alt="Participants"
+              class="icon"
+              src="../picture/equipe-removebg-preview.png"
+            />
+            <p>1 Participants</p>
+          </div>
+          <!-- Technologies utilisées -->
+          <div class="project-detail">
+            <img
+              alt="Technologies"
+              class="icon"
+              src="../picture/ordi-removebg-preview.png"
+            />
+            <div class="languages-used">
+              <img
+                alt="VB6 Logo"
+                class="language-logo"
+                src="../picture/vb6-removebg-preview.png"
+              />
+              <img
+                alt="Python Logo"
+                class="language-logo"
+                src="../picture/pythonlogo-removebg-preview.png"
+              />
+              <img
+                alt="XML Logo"
+                class="language-logo"
+                src="../picture/xmllogo.png"
+              />
             </div>
-            <!-- Technologies utilisées -->
-            <div class="project-detail">
-                <img src="../picture/ordi-removebg-preview.png" alt="Technologies" class="icon">
-                <div class="languages-used">
-                    <img src="../picture/vb6-removebg-preview.png" alt="VB6 Logo" class="language-logo">
-                    <img src="../picture/pythonlogo-removebg-preview.png" alt="Python Logo" class="language-logo">
-                    <img src="../picture/xmllogo.png" alt="XML Logo" class="language-logo">
-                </div>
-            </div>
-            <!-- Durée du projet -->
-            <div class="project-detail">
-                <img src="../picture/horlogelogo-removebg-preview.png" alt="Durée" class="icon">
-                <p>En cours</p>
-            </div>
+          </div>
+          <!-- Durée du projet -->
+          <div class="project-detail">
+            <img
+              alt="Durée"
+              class="icon"
+              src="../picture/horlogelogo-removebg-preview.png"
+            />
+            <p>En cours</p>
+          </div>
         </div>
         <p>Informations détaillées sur le projet réalisé en entreprise.</p>
+        <div class="documents-section">
+          <h3>Accéder aux Documents</h3>
+          <p>
+            Veuillez entrer le mot de passe pour accéder aux documents liés à ce
+            projet.
+          </p>
+          <input
+            id="password_modal4"
+            placeholder="Mot de passe"
+            type="password"
+          /><button
+            onclick="validatePassword('password_modal4', 'docs_modal4')"
+          >
+            Valider
+          </button>
+          <div id="docs_modal4" style="display: none; margin-top: 20px">
+            <h4>Documents disponibles</h4>
+            <p>
+              <a href="path/to/modal4_doc1.pdf" target="_blank"
+                >Télécharger le document 1 - API Amazon</a
+              >
+            </p>
+            <p>
+              <a href="path/to/modal4_doc2.pdf" target="_blank"
+                >Télécharger le document 2 - API Amazon</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
-
-<footer>
-    <div class="container">
+    <footer>
+      <div class="container">
         <!-- Section des informations personnelles (email et téléphone) -->
         <div class="contact-info">
-            <p><strong>Email :</strong> <a href="mailto:enzopace05@gmail.com">enzopace05@gmail.com</a></p>
-            <p><strong>Téléphone :</strong> 06 16 25 49 14</p>
+          <p>
+            <strong>Email :</strong>
+            <a href="mailto:enzopace05@gmail.com">enzopace05@gmail.com</a>
+          </p>
+          <p><strong>Téléphone :</strong> 06 16 25 49 14</p>
         </div>
-        
         <!-- Section des icônes sociales -->
         <div class="social-icons">
-            <a href="https://linkedin.com" target="_blank"><img src="../picture/logo-linkedin-noir.jpg" alt="LinkedIn"></a>
-            <a href="https://www.instagram.com/enzo.sunchine/profilecard/?igsh=bHphdDNjeHd3aHdj" target="_blank"><img src="../picture/logo-instagram-noir-png.jpg" alt="Instagram"></a>
-            <a href="https://github.com/enzopc05" target="_blank"><img src="../picture/githublogo-removebg-preview.png" alt="GitHub"></a>
+          <a href="https://linkedin.com" target="_blank"
+            ><img alt="LinkedIn" src="../picture/logo-linkedin-noir.jpg"
+          /></a>
+          <a
+            href="https://www.instagram.com/enzo.sunchine/profilecard/?igsh=bHphdDNjeHd3aHdj"
+            target="_blank"
+            ><img alt="Instagram" src="../picture/logo-instagram-noir-png.jpg"
+          /></a>
+          <a href="https://github.com/enzopc05" target="_blank"
+            ><img alt="GitHub" src="../picture/githublogo-removebg-preview.png"
+          /></a>
         </div>
-
         <!-- Section Copyright -->
         <p>© Enzo Pace 2024</p>
-    </div>
-</footer>
-
-<!-- Script pour gérer les modales -->
-<script src="../dev-sheet/realisations.js"></script>
-
-</body>
+      </div>
+    </footer>
+    <!-- Script pour gérer les modales -->
+    <script src="../dev-sheet/realisations.js"></script>
+  </body>
 </html>
