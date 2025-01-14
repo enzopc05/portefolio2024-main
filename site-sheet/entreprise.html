@@ -26,47 +26,43 @@
       </div>
     </header>
 
-    <main>
-      <section>
-        <div class="container">
-          <h2>Entreprise</h2>
-          <p>
-            Informations sur ton entreprise actuelle, RE/MAX France, et tes
-            missions.
-          </p>
+    <div class="logo-switcher">
+      <button id="logo-remax">
+        <img
+          src="../picture/remax-logo-og-removebg-preview.png"
+          alt="Logo RE/MAX"
+        />
+      </button>
+      <button id="logo-eurodislog">
+        <img src="../picture/eurodislog (1).png" alt="Logo Eurodislog" />
+      </button>
+    </div>
 
-          <div class="year-container">
-            <!-- Première Entreprise -->
-            <div class="year-box">
-              <img
-                src="../picture/remax-logo-og-removebg-preview.png"
-                alt="Logo de RE/MAX"
-                class="company-logo"
-              />
-              <p>
-                Ajoute ici des informations sur ton entreprise de 1ère année.
-              </p>
-            </div>
+    <!-- Contenu principal dynamique -->
+    <main id="content">
+      <!-- Section pour RE/MAX -->
+      <section id="remax-content" class="company-content active">
+        <h2>RE/MAX France</h2>
+        <p>
+          RE/MAX est une entreprise spécialisée dans l'immobilier. Mes missions
+          incluent le support informatique, la mise à disposition de flux XML,
+          et la recherche de bugs sur leur CRM.
+        </p>
+      </section>
 
-            <!-- Deuxième Entreprise -->
-            <div class="year-box">
-              <img
-                src="../picture/eurodislog (1).png"
-                alt="Logo d'EURODISLOG"
-                class="company-logo"
-              />
-              <p>
-                Ajoute ici des informations sur ton entreprise de 2ème année.
-              </p>
-            </div>
-          </div>
-        </div>
+      <!-- Section pour Eurodislog -->
+      <section id="eurodislog-content" class="company-content hidden">
+        <h2>Eurodislog</h2>
+        <p>
+          Eurodislog est une entreprise spécialisée dans la logistique. Mes
+          missions comprennent le support technique et la gestion des projets IT
+          pour améliorer les processus internes.
+        </p>
       </section>
     </main>
 
     <footer>
       <div class="container">
-        <!-- Section des informations personnelles (email et téléphone) -->
         <div class="contact-info">
           <p>
             <strong>Email :</strong>
@@ -74,8 +70,6 @@
           </p>
           <p><strong>Téléphone :</strong> 06 16 25 49 14</p>
         </div>
-
-        <!-- Section des icônes sociales -->
         <div class="social-icons">
           <a href="https://linkedin.com" target="_blank"
             ><img src="../picture/logo-linkedin-noir.jpg" alt="LinkedIn"
@@ -89,10 +83,10 @@
             ><img src="../picture/githublogo-removebg-preview.png" alt="GitHub"
           /></a>
         </div>
-
-        <!-- Section Copyright -->
         <p>© Enzo Pace 2024</p>
       </div>
     </footer>
+
+    <script src="../dev-sheet/entreprise.js"></script>
   </body>
 </html>
