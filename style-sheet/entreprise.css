@@ -63,12 +63,16 @@ nav ul li a::after {
   height: 2px;
   left: 0;
   bottom: 0;
-  background-color: var(--bgColor);
+  background-color: #eee6d8;
   transition: width 0.3s ease;
 }
 
 nav ul li a:hover::after {
   width: 100%;
+}
+
+.header-scroll {
+  background-color: rgba(218, 171, 58, 1);
 }
 
 .logo-switcher {
