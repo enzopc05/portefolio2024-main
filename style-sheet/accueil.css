@@ -522,3 +522,130 @@ footer p {
     margin-bottom: 10px;
   }
 }
+
+.description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.details {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-top: 10px;
+}
+
+.subheading {
+  font-weight: bold;
+  color: #b67332;
+}
+
+.skills-list {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding-left: 10px;
+  color: #333;
+}
+
+.skills-list li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.closing {
+  font-size: 1rem;
+  font-style: italic;
+  color: #555;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  color: #555;
+}
+
+ul li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+strong {
+  color: #b67332; /* Accent sur les mots importants */
+}
+
+/* Eurodislog */
+#eurodislog {
+  margin-top: 40px;
+  padding: 20px;
+}
+
+#eurodislog .section-title {
+  font-size: 1.8rem;
+  color: #b67332; /* Marron clair */
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+#eurodislog .eurodislog-subtitle {
+  font-size: 1.4rem;
+  color: #b67332;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+#eurodislog .eurodislog-paragraph {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+#eurodislog .eurodislog-list {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding-left: 10px;
+  color: #555;
+}
+
+#eurodislog .eurodislog-list li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+#eurodislog .eurodislog-list strong {
+  color: #b67332; /* Accent sur les mots importants */
+  font-weight: bold;
+}
+
+/*BAC STI2D SIN*/
+#bac-sti2d .bac-paragraph {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+#bac-sti2d .bac-list {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding-left: 10px;
+  color: #555;
+}
+
+#bac-sti2d .bac-list li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+#bac-sti2d .bac-list strong {
+  color: #b67332; /* Accent sur les mots importants */
+  font-weight: bold;
+}
