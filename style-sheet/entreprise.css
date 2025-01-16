@@ -12,7 +12,7 @@ body {
 }
 
 header {
-  background-color: rgba(218, 171, 58, 0.8);
+  background-color: rgba(218, 171, 58, 0.8); /* Jaune doré avec transparence */
   color: #fff;
   padding: 20px 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -20,7 +20,7 @@ header {
   top: 0;
   width: 100%;
   z-index: 1000;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px); /* Effet de flou */
   transition: background-color 0.3s ease;
 }
 
@@ -31,6 +31,24 @@ header .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+.header-content {
+  display: flex; /* Aligne l'image et le titre horizontalement */
+  align-items: center; /* Centre l'image et le texte verticalement */
+  gap: 1rem; /* Espacement entre l'image et le titre */
+}
+
+/* Conteneur pour l'image */
+.image-entete {
+  max-width: 85px; /* Limite la largeur maximale de l'image */
+  margin-right: 1rem; /* Espacement entre l'image et le texte */
+}
+
+.image-entete img {
+  width: 100%; /* L'image s'adapte à la largeur du conteneur */
+  height: auto; /* Conserve les proportions de l'image */
+  display: block; /* Assure que l'image reste un bloc */
 }
 
 header h1 {

@@ -43,6 +43,24 @@ header .container {
   padding: 0 20px;
 }
 
+.header-content {
+  display: flex; /* Aligne l'image et le titre horizontalement */
+  align-items: center; /* Centre l'image et le texte verticalement */
+  gap: 1rem; /* Espacement entre l'image et le titre */
+}
+
+/* Conteneur pour l'image */
+.image-entete {
+  max-width: 85px; /* Limite la largeur maximale de l'image */
+  margin-right: 1rem; /* Espacement entre l'image et le texte */
+}
+
+.image-entete img {
+  width: 100%; /* L'image s'adapte à la largeur du conteneur */
+  height: auto; /* Conserve les proportions de l'image */
+  display: block; /* Assure que l'image reste un bloc */
+}
+
 header h1 {
   margin: 0;
   font-size: 2rem;
