@@ -10,16 +10,16 @@ function closeModal(modal) {
 }
 
 // Ajout des événements de clic sur les cases de la frise
-document.getElementById("bts").onclick = function () {
+document.getElementById("bts-tl").onclick = function () {
   openModal("modal-bts");
 };
-document.getElementById("remax").onclick = function () {
+document.getElementById("remax-tl").onclick = function () {
   openModal("modal-remax");
 };
-document.getElementById("eurodislog").onclick = function () {
+document.getElementById("eurodislog-tl").onclick = function () {
   openModal("modal-eurodislog");
 };
-document.getElementById("bac").onclick = function () {
+document.getElementById("bac-tl").onclick = function () {
   openModal("modal-bac");
 };
 
