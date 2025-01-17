@@ -193,3 +193,87 @@ footer p {
     margin-bottom: 10px;
   }
 }
+
+/* Style de base du bouton */
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Effet de hover */
+.theme-toggle:hover {
+  transform: scale(1.1);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Mode nuit - Icône lune */
+body.night-mode .theme-toggle .icon {
+  content: "🌙"; /* Lune */
+}
+
+/* Mode jour - Icône soleil */
+.theme-toggle .icon {
+  content: "🌞"; /* Soleil */
+}
+
+/* Mode nuit */
+body.night-mode {
+  --color: #ffffff; /* Texte blanc */
+  --bgColor: #001f3f; /* Bleu foncé pour le fond */
+  background-color: var(--bgColor);
+  color: var(--color);
+}
+
+body.night-mode header {
+  background-color: #003366; /* Un bleu légèrement plus clair pour le header */
+  color: var(--color);
+}
+
+body.night-mode footer {
+  background-color: #00264d; /* Bleu foncé pour le footer */
+  color: var(--color);
+}
+
+body.night-mode button {
+  background-color: #004080; /* Bleu intense pour les boutons */
+  color: var(--color);
+}
+
+/* Style du bouton dynamique */
+.theme-toggle {
+  background-color: #87ceeb; /* Bleu ciel pour le mode jour */
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+body.night-mode .theme-toggle {
+  background-color: #001f3f; /* Bleu foncé pour le bouton en mode nuit */
+  color: #fff;
+}
+
+body.night-mode .theme-toggle:hover {
+  background-color: #00264d; /* Légèrement plus clair pour le hover en mode nuit */
+}
