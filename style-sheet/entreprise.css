@@ -159,6 +159,94 @@ main {
   display: block;
 }
 
+/* Boutons de basculement */
+.company-switch {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.switch-btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #b67332;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.switch-btn:hover {
+  background-color: #a15d2a;
+}
+
+/* Sections des entreprises */
+.company-content {
+  display: none; /* Cache les sections par défaut */
+}
+
+.company-content.active {
+  display: block; /* Affiche uniquement la section active */
+}
+
+.hidden {
+  display: none !important; /* Assure qu'une section est masquée */
+}
+
+/* Conteneur pour la carte et les boutons */
+.company-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.map-container {
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.linkedin-btn {
+  background-color: #0077b5;
+}
+
+.linkedin-btn:hover {
+  background-color: #005582;
+}
+
+.website-btn {
+  background-color: #b67332;
+}
+
+.website-btn:hover {
+  background-color: #a15d2a;
+}
+
 footer {
   background-color: #daab3a;
   color: #fff;
