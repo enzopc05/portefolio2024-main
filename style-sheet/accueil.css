@@ -174,16 +174,17 @@ h2 {
 /* Section des compétences techniques */
 #skills {
   padding: 40px 20px;
-  background: #eee6d8;
+  background-color: var(--bgColor); /* Fond basé sur la variable dynamique */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   margin-bottom: 40px;
 }
 
 #skills h2 {
+  color: var(--color); /* Couleur du titre basée sur la variable */
   text-align: center;
-  color: #b67332;
   margin-bottom: 20px;
+  font-size: 1.5rem;
 }
 
 /* Conteneur général des outils et compétences */
@@ -198,23 +199,24 @@ h2 {
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 20px;
+  background-color: transparent; /* Aucune couleur fixe pour éviter les conflits */
 }
 
 /* Style des cartes de compétences et d'outils */
 .tool,
 .skill {
-  background-color: #e5e7e6; /* Fond gris clair */
-  text-align: center;
-  width: 150px; /* Largeur de la carte */
-  height: 150px; /* Hauteur de la carte */
-  border-radius: 8px; /* Coins arrondis */
+  background-color: var(--bgColor); /* Fond basé sur la variable dynamique */
+  color: var(--color); /* Texte basé sur la variable dynamique */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Transition douce pour hover */
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  width: 150px; /* Largeur des cartes */
+  height: 150px; /* Hauteur des cartes */
   display: flex;
+  justify-content: center; /* Centrage vertical */
+  align-items: center; /* Centrage horizontal */
   flex-direction: column;
-  justify-content: center; /* Centrer verticalement */
-  align-items: center; /* Centrer horizontalement */
-  padding: 10px; /* Ajout de padding intérieur */
+  padding: 10px; /* Espacement interne */
 }
 
 /* Logo centré dans la carte */
@@ -230,20 +232,21 @@ h2 {
 /* Texte en bas de la carte */
 .tool p,
 .skill p {
-  text-align: center; /* Centre le texte horizontalement */
+  color: var(--color); /* Texte qui s'adapte au thème */
   font-size: 0.9rem;
   font-weight: bold;
-  color: #333;
   margin: 10px 0 0 0;
   padding-top: 10px;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Ligne subtile visible en mode nuit */
 }
 
 /* Effet de hover */
+/* Hover pour les cartes en mode jour */
 .tool:hover,
 .skill:hover {
-  transform: translateY(-5px); /* Légère élévation au hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre plus marquée */
+  background-color: #d6cbbf; /* Beige plus foncé au survol */
+  color: #8a4f24; /* Marron plus foncé pour le texte */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Ombre subtile */
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
@@ -670,8 +673,8 @@ strong {
 
 /* Style de base du bouton */
 .theme-toggle {
-  background: none;
-  border: none;
+  background-color: #ffa500; /* Orange pour l'état par défaut */
+  color: #fff; /* Texte blanc */
   font-size: 1.5rem;
   cursor: pointer;
   display: flex;
@@ -680,14 +683,14 @@ strong {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Effet de hover */
 .theme-toggle:hover {
-  transform: scale(1.1);
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: #ffcc80; /* Orange clair au survol */
+  transform: scale(1.1); /* Agrandissement léger */
 }
 
 /* Mode nuit - Icône lune */
@@ -702,45 +705,147 @@ body.night-mode .theme-toggle .icon {
 
 /* Mode nuit */
 body.night-mode {
-  --color: #ffffff; /* Texte blanc */
-  --bgColor: #001f3f; /* Bleu foncé pour le fond */
+  --color: #d4e3fc; /* Blanc légèrement bleuté pour meilleure lisibilité */
+  --bgColor: #001f3f; /* Fond bleu foncé */
   background-color: var(--bgColor);
   color: var(--color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body.night-mode header {
-  background-color: #003366; /* Un bleu légèrement plus clair pour le header */
-  color: var(--color);
+  background-color: #003366; /* Bleu légèrement plus clair */
+  color: #e6f0ff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 body.night-mode footer {
-  background-color: #00264d; /* Bleu foncé pour le footer */
+  background-color: #00264d; /* Bleu foncé */
+  color: #e6f0ff; /* Blanc pur */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+body.night-mode .contact-info a {
+  color: #c0d6f2; /* Bleu clair pour les liens */
+}
+
+body.night-mode .contact-info a:hover {
+  color: #ffffff; /* Blanc pur au survol */
+}
+body.night-mode nav ul li a {
+  color: #c0d6f2; /* Bleu clair pour les liens */
+}
+
+body.night-mode nav ul li a:hover {
+  color: #ffffff; /* Blanc au survol */
+}
+
+body.night-mode section {
+  background: #002b5c; /* Bleu profond */
   color: var(--color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+body.night-mode section:hover {
+  background: #003366; /* Bleu légèrement plus clair */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+body.night-mode .btn-cv {
+  background-color: #004080; /* Bleu intense */
+  color: var(--color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+body.night-mode .btn-cv:hover {
+  background-color: #00509e; /* Bleu plus lumineux */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+/* Mode nuit spécifique à #skills */
+body.night-mode #skills {
+  background-color: #002b5c; /* Fond bleu profond pour la section */
+  color: var(--color); /* Texte basé sur la variable */
+}
+
+body.night-mode #skills h2 {
+  color: #e6f0ff; /* Blanc pur pour le titre */
+}
+
+body.night-mode .skills-container {
+  background-color: transparent; /* Fond transparent pour les conteneurs */
+}
+
+body.night-mode .tool,
+body.night-mode .skill {
+  background-color: #002b5c; /* Fond bleu profond des cartes */
+  color: #d4e3fc; /* Blanc légèrement bleuté pour le texte */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Hover pour les cartes en mode nuit */
+body.night-mode .tool:hover,
+body.night-mode .skill:hover {
+  background-color: #003366; /* Bleu légèrement plus clair */
+  color: #e6f0ff; /* Blanc pur pour le texte */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+body.night-mode .tool,
+body.night-mode .skill {
+  background-color: #002b5c; /* Bleu profond */
+  color: var(--color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+body.night-mode .tool:hover,
+body.night-mode .skill:hover {
+  background-color: #003366; /* Bleu légèrement plus clair */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+body.night-mode #timeline-section ul.timeline::before {
+  background: #00509e; /* Bleu lumineux pour la ligne */
+}
+
+body.night-mode #timeline-section ul.timeline li .date {
+  background-color: #00264d; /* Bleu foncé */
+  color: #e6f0ff;
+}
+
+body.night-mode #timeline-section ul.timeline li .title,
+body.night-mode #timeline-section ul.timeline li .descr {
+  background-color: #002b5c; /* Bleu profond */
+  color: #d4e3fc;
+}
+
+body.night-mode #timeline-section ul.timeline li .title::before,
+body.night-mode #timeline-section ul.timeline li .descr::before {
+  background: rgba(255, 255, 255, 0.2); /* Ombre subtile en mode nuit */
+}
+
+body.night-mode .modal-content {
+  background-color: #002b5c; /* Fond bleu profond */
+  color: #e6f0ff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+body.night-mode h2,
+body.night-mode h3 {
+  color: #e6f0ff; /* Blanc pur pour les titres */
+}
+
+body.night-mode section {
+  color: #d4e3fc; /* Blanc légèrement bleuté pour le contenu */
+}
+
+/*Bouton*/
+
+body.night-mode .close {
+  color: #d4e3fc;
 }
 
 body.night-mode button {
   background-color: #004080; /* Bleu intense pour les boutons */
   color: var(--color);
-}
-
-/* Style du bouton dynamique */
-.theme-toggle {
-  background-color: #87ceeb; /* Bleu ciel pour le mode jour */
-  color: #fff;
-  font-size: 1.5rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.theme-toggle:hover {
-  transform: scale(1.1);
 }
 
 body.night-mode .theme-toggle {

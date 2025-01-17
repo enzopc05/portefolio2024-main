@@ -312,63 +312,8 @@ footer p {
 
 /* Style de base du bouton */
 .theme-toggle {
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Effet de hover */
-.theme-toggle:hover {
-  transform: scale(1.1);
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-/* Mode nuit - Icône lune */
-body.night-mode .theme-toggle .icon {
-  content: "🌙"; /* Lune */
-}
-
-/* Mode jour - Icône soleil */
-.theme-toggle .icon {
-  content: "🌞"; /* Soleil */
-}
-
-/* Mode nuit */
-body.night-mode {
-  --color: #ffffff; /* Texte blanc */
-  --bgColor: #001f3f; /* Bleu foncé pour le fond */
-  background-color: var(--bgColor);
-  color: var(--color);
-}
-
-body.night-mode header {
-  background-color: #003366; /* Un bleu légèrement plus clair pour le header */
-  color: var(--color);
-}
-
-body.night-mode footer {
-  background-color: #00264d; /* Bleu foncé pour le footer */
-  color: var(--color);
-}
-
-body.night-mode button {
-  background-color: #004080; /* Bleu intense pour les boutons */
-  color: var(--color);
-}
-
-/* Style du bouton dynamique */
-.theme-toggle {
-  background-color: #87ceeb; /* Bleu ciel pour le mode jour */
-  color: #fff;
+  background-color: #ffa500; /* Orange pour l'état par défaut */
+  color: #fff; /* Texte blanc */
   font-size: 1.5rem;
   cursor: pointer;
   display: flex;
@@ -381,10 +326,120 @@ body.night-mode button {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Effet de hover */
 .theme-toggle:hover {
-  transform: scale(1.1);
+  background-color: #ffcc80; /* Orange clair au survol */
+  transform: scale(1.1); /* Agrandissement léger */
+}
+/* Mode nuit - Icône lune */
+body.night-mode .theme-toggle .icon {
+  content: "🌙"; /* Lune */
 }
 
+/* Mode jour - Icône soleil */
+.theme-toggle .icon {
+  content: "🌞"; /* Soleil */
+}
+
+/* Mode nuit */
+body.night-mode {
+  --color: #d4e3fc; /* Blanc légèrement bleuté pour le texte */
+  --bgColor: #001f3f; /* Bleu foncé pour le fond */
+  background-color: var(--bgColor);
+  color: var(--color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.night-mode header {
+  background-color: #003366; /* Bleu légèrement plus clair */
+  color: #e6f0ff; /* Blanc pur pour le texte */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Ombre subtile */
+}
+
+body.night-mode nav ul li a {
+  color: #c0d6f2; /* Bleu clair pour les liens */
+}
+
+body.night-mode nav ul li a:hover {
+  color: #ffffff; /* Blanc pur au survol */
+}
+
+body.night-mode section {
+  background: #002b5c; /* Bleu profond */
+  color: var(--color); /* Texte basé sur la variable */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.night-mode section:hover {
+  background: #003366; /* Bleu légèrement plus clair au survol */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+body.night-mode .sorting button {
+  background-color: #004080; /* Bleu intense */
+  color: #e6f0ff; /* Blanc pur */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+body.night-mode .sorting button:hover {
+  background-color: #00509e; /* Bleu plus clair au survol */
+  color: #ffffff; /* Blanc pur */
+  transform: scale(1.1); /* Agrandissement léger */
+}
+
+body.night-mode .articles-container a {
+  background-color: #002b5c; /* Bleu profond pour le fond */
+  color: #e6f0ff;
+  border: 1px solid rgba(212, 227, 252, 0.5); /* Bordure subtile bleutée */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+body.night-mode .articles-container a:hover {
+  background-color: #003366; /* Bleu légèrement plus clair */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+}
+
+body.night-mode .detail-article p {
+  color: #e6f0ff;
+}
+
+body.night-mode .detail-article p:hover {
+  color: #ffffff;
+}
+
+body.night-mode .year-box {
+  background: #002b5c; /* Bleu profond */
+  color: var(--color); /* Texte basé sur la variable */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+body.night-mode .year-box:hover {
+  background: #003366; /* Bleu légèrement plus clair */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+body.night-mode footer {
+  background-color: #00264d; /* Bleu foncé */
+  color: #e6f0ff; /* Blanc pur pour le texte */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+body.night-mode .contact-info a {
+  color: #c0d6f2; /* Bleu clair pour les liens */
+}
+
+body.night-mode .contact-info a:hover {
+  color: #ffffff; /* Blanc pur au survol */
+}
+
+body.night-mode button {
+  background-color: #004080; /* Bleu intense pour les boutons */
+  color: var(--color);
+}
+
+/* Style du bouton dynamique */
 body.night-mode .theme-toggle {
   background-color: #001f3f; /* Bleu foncé pour le bouton en mode nuit */
   color: #fff;

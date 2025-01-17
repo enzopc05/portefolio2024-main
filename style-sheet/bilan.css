@@ -228,20 +228,57 @@ body.night-mode .theme-toggle .icon {
 
 /* Mode nuit */
 body.night-mode {
-  --color: #ffffff; /* Texte blanc */
+  --color: #d4e3fc; /* Blanc légèrement bleuté pour le texte */
   --bgColor: #001f3f; /* Bleu foncé pour le fond */
   background-color: var(--bgColor);
   color: var(--color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body.night-mode header {
-  background-color: #003366; /* Un bleu légèrement plus clair pour le header */
-  color: var(--color);
+  background-color: #003366; /* Bleu légèrement plus clair */
+  color: #e6f0ff; /* Blanc pur pour le texte */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Ombre subtile */
+}
+
+body.night-mode nav ul li a {
+  color: #c0d6f2; /* Bleu clair pour les liens */
+}
+
+body.night-mode nav ul li a:hover {
+  color: #ffffff; /* Blanc pur au survol */
+}
+
+body.night-mode section {
+  background: #002b5c; /* Bleu profond */
+  color: var(--color); /* Texte basé sur la variable */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.night-mode section h2 {
+  color: #e6f0ff; /* Blanc pur pour les titres */
+}
+* body.night-mode ul {
+  color: #d4e3fc; /* Blanc légèrement bleuté pour les listes */
+}
+
+body.night-mode ul li {
+  color: #c0d6f2; /* Bleu clair pour les éléments des listes */
 }
 
 body.night-mode footer {
-  background-color: #00264d; /* Bleu foncé pour le footer */
-  color: var(--color);
+  background-color: #00264d; /* Bleu foncé */
+  color: #e6f0ff; /* Blanc pur pour le texte */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+body.night-mode .contact-info a {
+  color: #c0d6f2; /* Bleu clair pour les liens */
+}
+
+body.night-mode .contact-info a:hover {
+  color: #ffffff; /* Blanc pur au survol */
 }
 
 body.night-mode button {
@@ -251,8 +288,8 @@ body.night-mode button {
 
 /* Style du bouton dynamique */
 .theme-toggle {
-  background-color: #87ceeb; /* Bleu ciel pour le mode jour */
-  color: #fff;
+  background-color: #ffa500; /* Orange pour l'état par défaut */
+  color: #fff; /* Texte blanc */
   font-size: 1.5rem;
   cursor: pointer;
   display: flex;
@@ -265,8 +302,10 @@ body.night-mode button {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Effet de hover */
 .theme-toggle:hover {
-  transform: scale(1.1);
+  background-color: #ffcc80; /* Orange clair au survol */
+  transform: scale(1.1); /* Agrandissement léger */
 }
 
 body.night-mode .theme-toggle {
