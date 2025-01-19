@@ -56,6 +56,7 @@ header .container {
 }
 
 .image-entete img {
+  content: url("../personnage/personnage-soleil-sans-fond/DAD42A_1-removebg-preview.png");
   width: 100%; /* L'image s'adapte à la largeur du conteneur */
   height: auto; /* Conserve les proportions de l'image */
   display: block; /* Assure que l'image reste un bloc */
@@ -716,6 +717,10 @@ body.night-mode header {
   background-color: #003366; /* Bleu légèrement plus clair */
   color: #e6f0ff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+body.night-mode .image-entete img {
+  content: url("../personnage/personnage-lune-sans-fond/joyeux.png"); /* Chemin de l'image pour le mode nuit */
 }
 
 body.night-mode footer {

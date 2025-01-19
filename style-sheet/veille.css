@@ -50,6 +50,7 @@ header .container {
 }
 
 .image-entete img {
+  content: url("../personnage/personnage-soleil-sans-fond/DA846F_1-removebg-preview.png");
   width: 100%; /* L'image s'adapte à la largeur du conteneur */
   height: auto; /* Conserve les proportions de l'image */
   display: block; /* Assure que l'image reste un bloc */
@@ -362,6 +363,10 @@ body.night-mode nav ul li a {
 
 body.night-mode nav ul li a:hover {
   color: #ffffff; /* Blanc pur au survol */
+}
+
+body.night-mode .image-entete img {
+  content: url("../personnage/personnage-lune-sans-fond/DALLE2_1-removebg-preview.png"); /* Chemin de l'image pour le mode nuit */
 }
 
 body.night-mode section {

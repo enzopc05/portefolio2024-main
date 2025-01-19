@@ -46,6 +46,7 @@ header .container {
 }
 
 .image-entete img {
+  content: url("../personnage/personnage-soleil-sans-fond/c3a9af79-b575-4cb4-9dd7-743b9c97146c-removebg-preview.png");
   width: 100%; /* L'image s'adapte à la largeur du conteneur */
   height: auto; /* Conserve les proportions de l'image */
   display: block; /* Assure que l'image reste un bloc */
@@ -206,7 +207,7 @@ main {
 }
 
 .map-container {
-  width: 100%;
+  flex: 1;
   max-width: 600px;
   height: 300px;
   border: 1px solid #ddd;
@@ -219,18 +220,25 @@ main {
   display: flex;
   justify-content: center;
   gap: 1rem;
+  margin-top: 1rem;
 }
 
 .btn {
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   font-weight: bold;
-  color: white;
+  color: #fff;
   text-decoration: none;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.btn:hover {
+  transform: scale(1.05); /* Agrandissement léger au survol */
+}
+
+/* Bouton LinkedIn */
 .linkedin-btn {
   background-color: #0077b5;
 }
@@ -239,12 +247,149 @@ main {
   background-color: #005582;
 }
 
+/* Bouton Site Web */
 .website-btn {
-  background-color: #b67332;
+  background-color: var(--color); /* Couleur principale */
 }
 
 .website-btn:hover {
-  background-color: #a15d2a;
+  background-color: #a15d2a; /* Variation plus foncée */
+}
+
+.company-description {
+  flex: 1;
+  background: #fff; /* Fond blanc pour contraste */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.company-description h2 {
+  margin-bottom: 15px;
+  color: var(--color); /* Couleur principale */
+  font-weight: 700;
+}
+
+.company-description p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+  color: #555; /* Gris doux */
+}
+
+.company-description ul {
+  list-style: disc inside; /* Points intégrés dans la liste */
+  padding: 0;
+  margin: 0;
+}
+
+.company-description ul li {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: #333; /* Gris foncé pour le texte */
+}
+
+/* Encadré pour l'équipe IT */
+#team-section {
+  background: #fff; /* Fond blanc */
+  border-radius: 10px; /* Coins arrondis */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  padding: 20px;
+  margin-top: 20px; /* Espacement avec les missions */
+}
+
+/* Titre de la section */
+#team-section h3 {
+  font-size: 1.8rem;
+  color: var(--color); /* Couleur principale */
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Conteneur des cartes */
+.team-container {
+  display: flex;
+  justify-content: center; /* Centré horizontalement */
+  gap: 2rem; /* Espacement entre les cartes */
+  flex-wrap: wrap; /* Permet un retour à la ligne si l'écran est petit */
+}
+
+/* Style des cartes membres */
+.team-member {
+  background: var(--bgColor); /* Fond cohérent avec le design */
+  border: 2px solid var(--color); /* Bordure colorée */
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 150px; /* Largeur fixe des cartes */
+}
+
+.team-member:hover {
+  transform: scale(1.05); /* Zoom léger au survol */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre renforcée */
+}
+
+/* Style de l'avatar */
+.member-avatar {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+  border-radius: 50%; /* Cercle */
+  border: 2px solid var(--color);
+}
+
+/* Texte des membres */
+.member-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--color);
+  margin: 0.5rem 0;
+}
+
+.member-role {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #555;
+  margin: 0;
+}
+
+/* Avatar garçon */
+.avatar-boy {
+  background-color: #4a90e2; /* Bleu */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* Avatar fille */
+.avatar-girl {
+  background-color: #e94a62; /* Rose */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+
+
+
+/* Alignement entre la description et la carte */
+.company-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 20px;
+  background: var(--bgColor);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
 }
 
 footer {
@@ -380,6 +525,10 @@ body.night-mode nav ul li a {
 
 body.night-mode nav ul li a:hover {
   color: #ffffff; /* Blanc pur au survol */
+}
+
+body.night-mode .image-entete img {
+  content: url("../personnage/personnage-lune-sans-fond/travail.png");
 }
 
 body.night-mode .logo-switcher {

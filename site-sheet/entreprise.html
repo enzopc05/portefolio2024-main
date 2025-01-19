@@ -17,7 +17,7 @@
           <!-- Image décorative -->
           <div class="image-entete">
             <img
-              src="../personnage/personnage-sans-fond/c3a9af79-b575-4cb4-9dd7-743b9c97146c-removebg-preview.png"
+              src="../personnage/personnage-soleil-sans-fond/c3a9af79-b575-4cb4-9dd7-743b9c97146c-removebg-preview.png"
               alt="Illustration décorative"
             />
           </div>
@@ -34,18 +34,18 @@
         </nav>
         <button id="toggleNightMode" class="theme-toggle">
           <span class="icon">🌞</span>
-      </div>
+        </button>
       </div>
     </header>
 
     <div class="logo-switcher">
-      <button id="logo-remax">
+      <button id="logo-remax" data-company="remax">
         <img
           src="../picture/remax-logo-og-removebg-preview.png"
           alt="Logo RE/MAX"
         />
       </button>
-      <button id="logo-eurodislog">
+      <button id="logo-eurodislog" data-company="eurodislog">
         <img src="../picture/eurodislog (1).png" alt="Logo Eurodislog" />
       </button>
     </div>
@@ -54,38 +54,142 @@
     <main id="content">
       <!-- Section pour RE/MAX -->
       <section id="remax-content" class="company-content active">
-        <h2>RE/MAX France</h2>
-        <p>
-          RE/MAX est une entreprise spécialisée dans l'immobilier. Mes missions
-          incluent le support informatique, la mise à disposition de flux XML,
-          et la recherche de bugs sur leur CRM.
-        </p>
-        <div class="company-info">
-          <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1311.6924796673068!2d2.1717047389933435!3d48.889000256440845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fc25c61fcb7%3A0xbd5cc894287fe37!2sRE%2FMAX%20France!5e0!3m2!1sen!2sfr!4v1737123853106!5m2!1sen!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="company-layout">
+          <!-- Description et missions -->
+          <div class="company-description">
+            <h2>RE/MAX France</h2>
+            <p>
+              RE/MAX est une entreprise spécialisée dans l'immobilier. Mes
+              missions incluent :
+            </p>
+            <ul class="missions-list">
+              <li>Support informatique pour les agences.</li>
+              <li>Mise à disposition de flux XML.</li>
+              <li>Recherche et résolution de bugs sur le CRM.</li>
+            </ul>
+
+            <h2>Notre Équipe IT</h2>
+            <div class="team-container">
+              <div class="team-member">
+                <div class="member-avatar avatar-boy">M</div>
+                <div class="member-name">Mylène GASPAR</div>
+                <div class="member-role">Chef de projet IT</div>
+              </div>
+              <div class="team-member">
+                <div class="member-avatar avatar-girl">E</div>
+                <div class="member-name">Enzo PACE (moi)</div>
+                <div class="member-role">Assistant chef de projet IT</div>
+              </div>
+              <div class="team-member">
+                <div class="member-avatar avatar-boy">S</div>
+                <div class="member-name">Servanne LENORMAND</div>
+                <div class="member-role">Assistante polyvalente</div>
+              </div>
+            </div>
           </div>
-          <div class="buttons-container">
-            <a href="https://www.linkedin.com/company/remaxfrance/posts/?feedView=all" target="_blank" class="btn linkedin-btn">LinkedIn</a>
-            <a href="https://www.remax.fr/fr" target="_blank" class="btn website-btn">Site Web</a>
+
+          
+          <!-- Carte et boutons -->
+          <div class="company-info">
+            <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1311.6924796673068!2d2.1717047389933435!3d48.889000256440845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fc25c61fcb7%3A0xbd5cc894287fe37!2sRE%2FMAX%20France!5e0!3m2!1sen!2sfr!4v1737123853106!5m2!1sen!2sfr"
+                width="400"
+                height="300"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
+            <div class="buttons-container">
+              <a
+                href="https://www.linkedin.com/company/remaxfrance/posts/?feedView=all"
+                target="_blank"
+                class="btn linkedin-btn"
+                >LinkedIn</a
+              >
+              <a
+                href="https://www.remax.fr/fr"
+                target="_blank"
+                class="btn website-btn"
+                >Site Web</a
+              >
+            </div>
           </div>
         </div>
       </section>
 
       <!-- Section pour Eurodislog -->
       <section id="eurodislog-content" class="company-content active">
-        <h2>Eurodislog</h2>
-        <p>
-          Eurodislog est une entreprise spécialisée dans la logistique. Mes
-          missions comprennent le support technique et la gestion des projets IT
-          pour améliorer les processus internes.
-        </p>
-        <div class="company-info">
-          <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5230.714011846386!2d2.1536073119745596!3d49.041835187659984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e65fb53feb49ad%3A0x3453fc7fa00361d3!2sEURODISLOG!5e0!3m2!1sfr!2sfr!4v1737123906782!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="company-layout">
+          <!-- Description et missions -->
+          <div class="company-description">
+            <h2>Eurodislog</h2>
+            <p>
+              Eurodislog est une entreprise spécialisée dans la logistique. Mes
+              missions en tant que Chargé de projet IT junior incluent :
+            </p>
+            <ul class="missions-list">
+              <li>Développement d'outils techniques</li>
+              <li>Gestion des projets IT pour améliorer les processus.</li>
+              <li>Optimisation des outils internes de gestion logistique.</li>
+            </ul>
+              <h2>Notre Équipe IT</h2>
+              <div class="team-container">
+                <div class="team-member">
+                  <div class="member-avatar avatar-boy">J-M</div>
+                  <div class="member-name">Jean-Michel COLLIN</div>
+                  <div class="member-role">Directeur pôle IT</div>
+                </div>
+                <div class="team-member">
+                  <div class="member-avatar avatar-girl">H</div>
+                  <div class="member-name">Hary RAMIANDRISOA</div>
+                  <div class="member-role">Chargé de mission informatique</div>
+                </div>
+                <div class="team-member">
+                  <div class="member-avatar avatar-boy">R</div>
+                  <div class="member-name">Romain DUQUERROIX</div>
+                  <div class="member-role">Chargé de mission informatique</div>
+                </div>
+                <div class="team-member">
+                  <div class="member-avatar avatar-girl">E</div>
+                  <div class="member-name">Enzo PACE (moi)</div>
+                  <div class="member-role">Chargé de projet IT junior</div>
+                </div>
+                <div class="team-member">
+                  <div class="member-avatar avatar-girl">J</div>
+                  <div class="member-name">Johan MARCHI</div>
+                  <div class="member-role">Chef de projet logistique</div>
+                </div>
+              </div>
           </div>
-          <div class="buttons-container">
-            <a href="https://www.linkedin.com/company/eurodislog/" target="_blank" class="btn linkedin-btn">LinkedIn</a>
-            <a href="https://my2.eurodislog.com/about" target="_blank" class="btn website-btn">Site Web</a>
+
+          <!-- Carte et boutons -->
+          <div class="company-info">
+            <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5230.714011846386!2d2.1536073119745596!3d49.041835187659984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e65fb53feb49ad%3A0x3453fc7fa00361d3!2sEURODISLOG!5e0!3m2!1sfr!2sfr!4v1737123906782!5m2!1sfr!2sfr"
+                width="400"
+                height="300"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
+            <div class="buttons-container">
+              <a
+                href="https://www.linkedin.com/company/eurodislog/"
+                target="_blank"
+                class="btn linkedin-btn"
+                >LinkedIn</a
+              >
+              <a
+                href="https://my2.eurodislog.com/about"
+                target="_blank"
+                class="btn website-btn"
+                >Site Web</a
+              >
+            </div>
           </div>
         </div>
       </section>
@@ -118,6 +222,6 @@
     </footer>
 
     <script src="../dev-sheet/entreprise.js"></script>
-    <script src="../dev-sheet/night-mode"></script>
+    <script src="../dev-sheet/night-mode.js"></script>
   </body>
 </html>
