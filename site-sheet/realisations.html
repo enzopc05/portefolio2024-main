@@ -44,23 +44,43 @@
     <!-- Section principale des réalisations -->
     <main>
       <div class="container">
+
+        <div class="filter-container">
+          <div class="select-wrapper">
+            <select id="techFilter" class="tech-select">
+              <option value="all">Filtrer par technologie</option>
+              <option value="python">Python</option>
+              <option value="javascript">JavaScript</option>
+              <option value="html">HTML/CSS</option>
+              <option value="java">Java</option>
+              <option value="javafx">JavaFX</option>
+              <option value="vba">VBA</option>
+              <option value="vb6">VB6</option>
+              <option value="xml">XML</option>
+            </select>
+          </div>
+        </div>
         <!-- Réalisations École -->
         <section id="realisations-ecole">
           <h2 class="section-title">Réalisations École</h2>
           <!-- Conteneur des projets école -->
           <div class="projects-container">
-            <article class="project">
+            <article class="project" data-tech="python javascript html">
               <h3>Les4Fantastiques</h3>
+              <div class="project-image-container">
               <img
                 alt="Image du projet école 1"
                 src="../picture/projetecole1.png"
               />
+            </div>
               <p>Requête à l'API Marvel afin d'avoir des résultats visuels</p>
               <button class="btn" data-modal="modal1">En savoir plus</button>
             </article>
-            <article class="project">
-              <h3>AlerTrain</h3>
-              <img alt="Image du projet école 2" src="../picture/alertrain.webp" />
+            <article class="project" data-tech="java javafx">
+              <h3>GhostTrack</h3>
+              <div class="project-image-container">
+              <img alt="Image du projet école 2" src="../picture/ghosttrack.jpg" />
+            </div>
               <p>Logiciel de ticketing sur le thème des trains</p>
               <button class="btn" data-modal="modal2">En savoir plus</button>
             </article>
@@ -71,23 +91,39 @@
           <h2 class="section-title">Réalisations Entreprise</h2>
           <!-- Conteneur des projets entreprise -->
           <div class="projects-container">
-            <article class="project">
+            <article class="project" data-tech="vba">
               <h3>Macro EXCEL</h3>
+              <div class="project-image-container">
               <img
                 alt="Image du projet entreprise 1"
                 src="../picture/projetentreprise1.png"
               />
+            </div>
               <p>Amélioration d'une macro EXCEL</p>
               <button class="btn" data-modal="modal3">En savoir plus</button>
             </article>
-            <article class="project">
+            <article class="project" data-tech="vb6 python xml">
               <h3>API Amazon</h3>
+              <div class="project-image-container">
               <img
                 alt="Image du projet entreprise 2"
                 src="../picture/amazonprojetentreprise2.png"
               />
+            </div>
               <p>Connexion et requête à l'API Amazon</p>
               <button class="btn" data-modal="modal4">En savoir plus</button>
+            </article>
+            
+            <article class="project" data-tech="csharp sql">
+              <h3>API POM</h3>
+              <div class="project-image-container">
+              <img
+                alt="Image du projet entreprise 3"
+                src="../picture/POM.jpg"
+              />
+            </div>
+              <p>Création d'une API</p>
+              <button class="btn" data-modal="modal5">En savoir plus</button>
             </article>
           </div>
         </section>
@@ -347,7 +383,7 @@
     <div class="modal" id="modal4">
       <div class="modal-content">
         <span class="close">×</span>
-        <h2>Détails du Projet Entreprise 2</h2>
+        <h2>Détails du Projet</h2>
         <div class="project-info">
           <!-- Participants -->
           <div class="project-detail">
@@ -425,6 +461,101 @@
         </div>
       </div>
     </div>
+
+        <!-- Modale pour Projet Entreprise 3 -->
+        <div class="modal" id="modal5">
+          <div class="modal-content">
+            <span class="close">×</span>
+            <h2>Détails du Projet</h2>
+            <div class="project-info">
+              <!-- Participants -->
+              <div class="project-detail">
+                <img
+                  alt="Participants"
+                  class="icon"
+                  src="../picture/equipe-removebg-preview.png"
+                />
+                <p>1 Participants</p>
+              </div>
+              <!-- Technologies utilisées -->
+              <div class="project-detail">
+                <img
+                  alt="Technologies"
+                  class="icon"
+                  src="../picture/ordi-removebg-preview.png"
+                />
+                <div class="languages-used">
+                  <img
+                    alt="VBA Logo"
+                    class="language-logo"
+                    src="../picture/vbalogo-removebg-preview.png "
+                  />
+                </div>
+              </div>
+              <!-- Durée du projet -->
+              <div class="project-detail">
+                <img
+                  alt="Durée"
+                  class="icon"
+                  src="../picture/horlogelogo-removebg-preview.png"
+                />
+                <p>1 semaine</p>
+              </div>
+            </div>
+            <div class="project-description">
+      <p>Ce projet est une API développée en ASP.NET Core pour une solution de gestion commerciale. L'application permet de gérer les entités principales suivantes :</p>
+      
+      <ul>
+        <li>Clients</li>
+        <li>Produits</li>
+        <li>Commandes</li>
+        <li>Lignes de commandes</li>
+      </ul>
+
+      <h3>Principales Caractéristiques</h3>
+      <ul>
+        <li>Une API REST sécurisée avec authentification par clé API</li>
+        <li>Une connexion flexible à différents types de bases de données (MySQL et SQL Server)</li>
+        <li>Des contrôleurs pour chaque entité permettant des opérations CRUD (Create, Read, Update, Delete)</li>
+        <li>Un système de middleware pour la validation des clés API</li>
+        <li>Une configuration dynamique de la connexion à la base de données via un fichier de configuration</li>
+      </ul>
+
+      <p>L'objectif principal est de fournir une interface technique permettant à un client de récupérer et de gérer ses données commerciales de manière automatisée et sécurisée.</p>
+
+      <p>Un point intéressant est également la présence d'un service de transfert de données qui permet de synchroniser les données entre différentes bases de données.</p>
+    </div>
+            <div class="documents-section">
+              <h3>Accéder aux Documents</h3>
+              <p>
+                Veuillez entrer le mot de passe pour accéder aux documents liés à ce
+                projet.
+              </p>
+              <input
+                id="password_modal3"
+                placeholder="Mot de passe"
+                type="password"
+              /><button
+                onclick="validatePassword('password_modal3', 'docs_modal3')"
+              >
+                Valider
+              </button>
+              <div id="docs_modal3" style="display: none; margin-top: 20px">
+                <h4>Documents disponibles</h4>
+                <p>
+                  <a href="path/to/modal3_doc1.pdf" target="_blank"
+                    >Télécharger le document 1 - Macro EXCEL</a
+                  >
+                </p>
+                <p>
+                  <a href="path/to/modal3_doc2.pdf" target="_blank"
+                    >Télécharger le document 2 - Macro EXCEL</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
     <footer>
       <div class="container">
         <!-- Section des informations personnelles (email et téléphone) -->
@@ -433,7 +564,6 @@
             <strong>Email :</strong>
             <a href="mailto:enzopace05@gmail.com">enzopace05@gmail.com</a>
           </p>
-          <p><strong>Téléphone :</strong> 06 16 25 49 14</p>
         </div>
         <!-- Section des icônes sociales -->
         <div class="social-icons">

@@ -107,6 +107,74 @@ main {
   background: var(--bgColor);
 }
 
+.filter-container {
+  margin: 20px 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.select-wrapper {
+  position: relative;
+  width: 250px;
+}
+
+.select-wrapper::after {
+  content: "▼";
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color);
+  pointer-events: none;
+  font-size: 12px;
+}
+
+.tech-select {
+  width: 100%;
+  padding: 8px 35px 8px 15px;
+  font-size: 14px;
+  border: 2px solid var(--color);
+  border-radius: 20px;
+  background-color: var(--bgColor);
+  color: var(--color);
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.tech-select:hover {
+  background-color: #e5e7e6;
+}
+
+/* Mode nuit */
+body.night-mode .tech-select {
+  background-color: #002b5c;
+  border-color: #004080;
+  color: #e6f0ff;
+}
+
+body.night-mode .select-wrapper::after {
+  color: #e6f0ff;
+}
+
+body.night-mode .tech-select:hover {
+  background-color: #003366;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .filter-container {
+    justify-content: center;
+  }
+
+  .select-wrapper {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -123,8 +191,8 @@ main {
 /* Conteneur des projets */
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(2, 1fr); /* Force 2 colonnes */
+  gap: 20px; /* Espace entre les projets */
   margin-bottom: 40px;
 }
 
@@ -138,16 +206,37 @@ main {
   text-align: center;
 }
 
+/* Pour les écrans plus petits, on passe à une colonne */
+@media (max-width: 768px) {
+  .projects-container {
+    grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+  }
+}
+
 .project:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.project img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
+.project-image-container {
+  height: 250px; /* Hauteur fixe pour tous les conteneurs */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 15px;
+  overflow: hidden; /* Masque ce qui dépasse */
+  border-radius: 8px;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Couvre tout le conteneur en conservant les proportions */
+  transition: transform 0.3s ease;
+}
+
+.project:hover .project-image {
+  transform: scale(1.1); /* Léger zoom au survol */
 }
 
 .project h3 {
@@ -164,18 +253,26 @@ main {
 /* Bouton */
 .btn {
   display: inline-block;
-  background-color: var(--color);
+  background-color: var(--color); /* Utilise la couleur de thème principale */
   color: white;
-  padding: 10px 20px;
-  border-radius: 4px;
+  padding: 12px 24px; /* Augmente légèrement le padding */
+  border-radius: 25px; /* Coins plus arrondis */
   text-decoration: none;
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  text-transform: uppercase; /* Texte en majuscules */
+  letter-spacing: 1px; /* Espacement entre les lettres */
+  transition: all 0.3s ease; /* Transition plus fluide */
   cursor: pointer;
+  border: 2px solid transparent; /* Prépare l'effet de bordure */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
 }
 
 .btn:hover {
-  background-color: #8a4f24;
+  background-color: #fff; /* Fond blanc */
+  color: var(--color); /* Couleur du texte en marron */
+  border-color: var(--color); /* Bordure de la couleur du thème */
+  transform: translateY(-3px); /* Léger effet de soulèvement */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
 }
 
 /* Modale avec effet d'apparition */
@@ -518,14 +615,17 @@ body.night-mode .close:hover {
   color: #ffffff; /* Blanc pur au survol */
 }
 
+/* Mode nuit : adaptations spécifiques */
 body.night-mode .btn {
-  background-color: #004080; /* Bleu intense pour le fond */
-  color: #e6f0ff; /* Blanc pur pour le texte */
+  background-color: #004080; /* Bleu intense */
+  color: #e6f0ff; /* Blanc légèrement bleuté */
+  border: 2px solid #005cb3; /* Bordure bleue */
 }
 
 body.night-mode .btn:hover {
-  background-color: #00509e; /* Bleu plus clair au survol */
-  color: #ffffff; /* Blanc pur */
+  background-color: #005cb3; /* Bleu plus clair */
+  color: white;
+  border-color: white;
 }
 
 .theme-toggle {

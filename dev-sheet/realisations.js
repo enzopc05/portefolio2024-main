@@ -66,3 +66,38 @@ toggleButton.addEventListener("click", () => {
     icon.textContent = "🌞"; // Icône soleil
   }
 });
+
+// Système de filtrage des projets
+document.addEventListener("DOMContentLoaded", function () {
+  const techSelect = document.getElementById("techFilter");
+  const projects = document.querySelectorAll(".project");
+
+  techSelect.addEventListener("change", function () {
+    const selectedTech = this.value;
+
+    projects.forEach((project) => {
+      const projectTechs = project.getAttribute("data-tech") || "";
+
+      if (selectedTech === "all") {
+        // Afficher tous les projets
+        project.style.opacity = "1";
+        project.style.transform = "scale(1)";
+        project.style.display = "block";
+      } else if (projectTechs.includes(selectedTech)) {
+        // Afficher les projets qui correspondent au filtre
+        project.style.display = "block";
+        setTimeout(() => {
+          project.style.opacity = "1";
+          project.style.transform = "scale(1)";
+        }, 10);
+      } else {
+        // Cacher les projets qui ne correspondent pas
+        project.style.opacity = "0";
+        project.style.transform = "scale(0.8)";
+        setTimeout(() => {
+          project.style.display = "none";
+        }, 300);
+      }
+    });
+  });
+});
