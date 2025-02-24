@@ -94,46 +94,73 @@ nav ul li a:hover::after {
   background-color: rgba(218, 171, 58, 1);
 }
 
+/* Style pour le conteneur des logos */
 .logo-switcher {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  padding: 20px;
-  background-color: var(--bgColor);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  gap: 2rem;
+  padding: 2rem;
+  margin: 20px auto;
+  max-width: 800px;
+  background-color: #fff;
+  border-radius: 15px;
+  border: 2px solid var(--color);
+  box-shadow: 0 4px 8px rgba(182, 115, 50, 0.2);
 }
 
+/* Style pour les boutons de logo */
 .logo-switcher button {
-  background: linear-gradient(135deg, #b67332, #daab3a);
-  border: none;
-  border-radius: 15px;
-  width: 150px;
-  height: 90px;
+  background: #fff;
+  border: 2px solid var(--color);
+  border-radius: 12px;
+  width: 200px;
+  height: 120px;
+  padding: 15px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
   position: relative;
+  overflow: hidden;
+}
+
+.logo-switcher button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(182, 115, 50, 0.1),
+    rgba(218, 171, 58, 0.1)
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .logo-switcher button img {
-  max-width: 80%;
-  max-height: 70%;
+  max-width: 85%;
+  max-height: 85%;
   object-fit: contain;
-  z-index: 1;
   transition: transform 0.3s ease;
 }
 
+/* Effets au survol */
 .logo-switcher button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(182, 115, 50, 0.3);
+  border-color: var(--color);
+}
+
+.logo-switcher button:hover::before {
+  opacity: 1;
 }
 
 .logo-switcher button:hover img {
-  transform: scale(1.1); /* Agrandit légèrement le logo */
+  transform: scale(1.1);
 }
 
 .hidden {
@@ -256,128 +283,120 @@ main {
   background-color: #a15d2a; /* Variation plus foncée */
 }
 
+/* Style pour la description de l'entreprise */
 .company-description {
   flex: 1;
-  background: #fff; /* Fond blanc pour contraste */
+  background: #fff;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--color);
+  box-shadow: 0 4px 8px rgba(182, 115, 50, 0.2);
+  transition: all 0.3s ease;
+}
+
+.company-description:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(182, 115, 50, 0.3);
 }
 
 .company-description h2 {
-  margin-bottom: 15px;
-  color: var(--color); /* Couleur principale */
-  font-weight: 700;
-}
-
-.company-description p {
   margin-bottom: 20px;
-  line-height: 1.6;
-  color: #555; /* Gris doux */
+  color: var(--color);
+  font-weight: 700;
+  border-bottom: 2px solid rgba(182, 115, 50, 0.2);
+  padding-bottom: 10px;
 }
 
-.company-description ul {
-  list-style: disc inside; /* Points intégrés dans la liste */
+.missions-list {
+  list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 30px 0;
 }
 
-.company-description ul li {
-  margin-bottom: 10px;
-  font-size: 0.95rem;
-  color: #333; /* Gris foncé pour le texte */
+.missions-list li {
+  margin-bottom: 12px;
+  padding-left: 25px;
+  position: relative;
+  color: #333;
 }
 
-/* Encadré pour l'équipe IT */
-#team-section {
-  background: #fff; /* Fond blanc */
-  border-radius: 10px; /* Coins arrondis */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
-  padding: 20px;
-  margin-top: 20px; /* Espacement avec les missions */
+.missions-list li::before {
+  content: "•";
+  color: var(--color);
+  font-size: 1.5em;
+  position: absolute;
+  left: 5px;
+  top: -4px;
 }
 
-/* Titre de la section */
-#team-section h3 {
-  font-size: 1.8rem;
-  color: var(--color); /* Couleur principale */
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-/* Conteneur des cartes */
+/* Style des cartes membres de l'équipe */
 .team-container {
   display: flex;
-  justify-content: center; /* Centré horizontalement */
-  gap: 2rem; /* Espacement entre les cartes */
-  flex-wrap: wrap; /* Permet un retour à la ligne si l'écran est petit */
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
-/* Style des cartes membres */
 .team-member {
-  background: var(--bgColor); /* Fond cohérent avec le design */
-  border: 2px solid var(--color); /* Bordure colorée */
+  background: #fff;
+  border: 2px solid var(--color);
   border-radius: 12px;
-  padding: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  padding: 1.2rem;
+  box-shadow: 0 4px 8px rgba(182, 115, 50, 0.2);
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 150px; /* Largeur fixe des cartes */
+  transition: all 0.3s ease;
+  width: 170px;
 }
 
 .team-member:hover {
-  transform: scale(1.05); /* Zoom léger au survol */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre renforcée */
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(182, 115, 50, 0.3);
+  background-color: var(--color);
 }
 
-/* Style de l'avatar */
+.team-member:hover .member-name,
+.team-member:hover .member-role {
+  color: #fff;
+}
+
 .member-avatar {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 1rem;
-  border-radius: 50%; /* Cercle */
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.5rem;
   border: 2px solid var(--color);
+  transition: all 0.3s ease;
 }
 
-/* Texte des membres */
+.avatar-boy {
+  background-color: #daab3a;
+  color: white;
+}
+
+.avatar-girl {
+  background-color: #b67332;
+  color: white;
+}
+
 .member-name {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: bold;
   color: var(--color);
-  margin: 0.5rem 0;
+  margin: 0.8rem 0;
+  transition: color 0.3s ease;
 }
 
 .member-role {
-  font-size: 1rem;
-  font-weight: 300;
+  font-size: 0.9rem;
   color: #555;
-  margin: 0;
+  transition: color 0.3s ease;
 }
-
-/* Avatar garçon */
-.avatar-boy {
-  background-color: #4a90e2; /* Bleu */
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  font-size: 1.5rem;
-}
-
-/* Avatar fille */
-.avatar-girl {
-  background-color: #e94a62; /* Rose */
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  font-size: 1.5rem;
-}
-
-
-
 
 /* Alignement entre la description et la carte */
 .company-layout {
@@ -531,27 +550,44 @@ body.night-mode .image-entete img {
   content: url("../personnage/personnage-lune-sans-fond/travail.png");
 }
 
+/* Mode nuit */
 body.night-mode .logo-switcher {
-  background-color: #00264d; /* Bleu profond pour le fond */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  background-color: #003366;
+  border-color: #4cadad;
+  box-shadow: 0 4px 8px rgba(76, 173, 173, 0.2);
 }
 
 body.night-mode .logo-switcher button {
+  background: #003366;
+  border-color: #4cadad;
+}
+
+body.night-mode .logo-switcher button::before {
   background: linear-gradient(
     135deg,
-    #003366,
-    #004080
-  ); /* Dégradé bleu foncé */
-  color: #ffffff; /* Texte blanc */
+    rgba(76, 173, 173, 0.1),
+    rgba(0, 64, 128, 0.1)
+  );
 }
 
 body.night-mode .logo-switcher button:hover {
-  background: linear-gradient(
-    135deg,
-    #004080,
-    #00509e
-  ); /* Dégradé bleu clair */
-  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(76, 173, 173, 0.3);
+  border-color: #4cadad;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .logo-switcher {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .logo-switcher button {
+    width: 180px;
+    height: 100px;
+  }
 }
 
 body.night-mode main {
@@ -616,4 +652,57 @@ body.night-mode .theme-toggle {
 
 body.night-mode .theme-toggle:hover {
   background-color: #00264d; /* Légèrement plus clair pour le hover en mode nuit */
+}
+
+/* Mode nuit */
+body.night-mode .company-description {
+  background: #003366;
+  border-color: #4cadad;
+  color: #e6f0ff;
+}
+
+body.night-mode .company-description h2 {
+  color: #4cadad;
+  border-bottom-color: rgba(76, 173, 173, 0.2);
+}
+
+body.night-mode .company-description p,
+body.night-mode .missions-list li {
+  color: #d4e3fc;
+}
+
+body.night-mode .missions-list li::before {
+  color: #4cadad;
+}
+
+body.night-mode .team-member {
+  background: #003366;
+  border-color: #4cadad;
+}
+
+body.night-mode .avatar-boy {
+  background-color: #004080;
+  border-color: #4cadad;
+}
+
+body.night-mode .avatar-girl {
+  background-color: #4cadad;
+  border-color: #004080;
+}
+
+body.night-mode .member-name {
+  color: #4cadad;
+}
+
+body.night-mode .member-role {
+  color: #d4e3fc;
+}
+
+body.night-mode .team-member:hover {
+  background-color: #4cadad;
+}
+
+body.night-mode .team-member:hover .member-name,
+body.night-mode .team-member:hover .member-role {
+  color: #fff;
 }

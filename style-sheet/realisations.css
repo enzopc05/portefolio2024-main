@@ -23,7 +23,7 @@ header {
   position: sticky;
   top: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 50;
   backdrop-filter: blur(10px); /* Effet de flou */
   transition: background-color 0.3s ease;
 }
@@ -191,95 +191,154 @@ body.night-mode .tech-select:hover {
 /* Conteneur des projets */
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Force 2 colonnes */
-  gap: 20px; /* Espace entre les projets */
-  margin-bottom: 40px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin: 20px 0;
 }
 
-/* Style des projets */
 .project {
-  background: #e5e7e6;
-  border-radius: 8px;
+  background: #fff;
+  border: 2px solid var(--color);
+  border-radius: 15px;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
-}
-
-/* Pour les écrans plus petits, on passe à une colonne */
-@media (max-width: 768px) {
-  .projects-container {
-    grid-template-columns: 1fr; /* Une seule colonne sur mobile */
-  }
+  height: fit-content; /* Pour éviter le chevauchement */
+  min-height: 400px; /* Hauteur minimale fixe */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .project:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(182, 115, 50, 0.2);
+  background-color: var(--color);
 }
 
+/* Image du projet */
 .project-image-container {
-  height: 250px; /* Hauteur fixe pour tous les conteneurs */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 180px; /* Réduire la hauteur */
+  width: 100%;
+  border-radius: 10px;
   margin-bottom: 15px;
-  overflow: hidden; /* Masque ce qui dépasse */
-  border-radius: 8px;
 }
 
-.project-image {
+.project-image-container img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Couvre tout le conteneur en conservant les proportions */
+  object-fit: cover; /* Assure que l'image couvre bien la zone */
   transition: transform 0.3s ease;
 }
 
-.project:hover .project-image {
-  transform: scale(1.1); /* Léger zoom au survol */
+.project:hover .project-image-container img {
+  transform: scale(1.05); /* Réduire l'échelle au hover */
 }
 
+/* Texte du projet */
 .project h3 {
   color: var(--color);
-  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
 }
 
 .project p {
-  color: #333;
+  color: #555;
   line-height: 1.6;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  flex-grow: 1;
+  transition: color 0.3s ease;
+}
+
+.project:hover h3,
+.project:hover p {
+  color: #fff;
+}
+
+/* Bouton du projet */
+.project .btn {
+  align-self: center;
+  padding: 12px 25px;
+  background-color: var(--color);
+  color: #fff;
+  border: 2px solid transparent;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  margin-top: auto;
+}
+
+.project:hover .btn {
+  background-color: #fff;
+  color: var(--color);
+  border-color: #fff;
+}
+
+/* Détails du projet dans la modale */
+.project-info {
+  background: var(--bgColor);
+  border-radius: 12px;
+  padding: 25px;
+  margin: 20px 0;
+}
+
+.project-detail {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1px solid var(--color);
+  border-radius: 10px;
+  padding: 15px;
   margin-bottom: 15px;
+  transition: all 0.3s ease;
 }
 
-/* Bouton */
-.btn {
-  display: inline-block;
-  background-color: var(--color); /* Utilise la couleur de thème principale */
-  color: white;
-  padding: 12px 24px; /* Augmente légèrement le padding */
-  border-radius: 25px; /* Coins plus arrondis */
-  text-decoration: none;
-  font-weight: bold;
-  text-transform: uppercase; /* Texte en majuscules */
-  letter-spacing: 1px; /* Espacement entre les lettres */
-  transition: all 0.3s ease; /* Transition plus fluide */
-  cursor: pointer;
-  border: 2px solid transparent; /* Prépare l'effet de bordure */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
+.project-detail:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(182, 115, 50, 0.15);
 }
 
-.btn:hover {
-  background-color: #fff; /* Fond blanc */
-  color: var(--color); /* Couleur du texte en marron */
-  border-color: var(--color); /* Bordure de la couleur du thème */
-  transform: translateY(-3px); /* Léger effet de soulèvement */
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
+.project-detail .icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+}
+
+.project-detail p {
+  color: #555;
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Technologies utilisées */
+.languages-used {
+  display: flex;
+  gap: 15px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 8px;
+  align-items: center;
+}
+
+.language-logo {
+  width: 35px;
+  height: 35px;
+  transition: transform 0.3s ease;
+}
+
+.language-logo:hover {
+  transform: scale(1.2);
 }
 
 /* Modale avec effet d'apparition */
 .modal {
   display: none; /* Masqué par défaut */
   position: fixed;
-  z-index: 1;
+  z-index: 100;
   left: 0;
   top: 0;
   width: 100%;
@@ -287,6 +346,7 @@ body.night-mode .tech-select:hover {
   background-color: rgba(0, 0, 0, 0.6); /* Arrière-plan noir transparent */
   overflow: auto;
   animation: fadeIn 0.5s ease; /* Animation pour un effet d'apparition */
+  padding-top: 50px;
 }
 
 @keyframes fadeIn {
@@ -300,14 +360,16 @@ body.night-mode .tech-select:hover {
 
 .modal-content {
   background-color: #fff;
-  margin: 10% auto;
+  margin: 5% auto;
   padding: 30px;
   border-radius: 12px;
   width: 80%;
   max-width: 700px;
+  max-height: 90vh;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Ombre plus douce */
   animation: scaleUp 0.4s ease; /* Animation pour agrandir le contenu */
   position: relative;
+  overflow-y: auto;
 }
 
 @keyframes scaleUp {
@@ -577,20 +639,55 @@ body.night-mode main {
   background-color: var(--bgColor);
 }
 
-body.night-mode .projects-container {
-  background-color: transparent; /* Fond transparent pour les conteneurs */
-}
-
+/* Mode nuit */
 body.night-mode .project {
-  background: #002b5c; /* Bleu profond pour les projets */
-  color: var(--color); /* Texte basé sur la variable */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  background: #003366;
+  border-color: #4cadad;
 }
 
 body.night-mode .project:hover {
-  background: #003366; /* Bleu légèrement plus clair au survol */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+  background: #4cadad;
+}
+
+body.night-mode .project h3 {
+  color: #e6f0ff;
+}
+
+body.night-mode .project p {
+  color: #d4e3fc;
+}
+
+body.night-mode .project-detail {
+  background: #002b5c;
+  border-color: #4cadad;
+}
+
+body.night-mode .project-detail p {
+  color: #d4e3fc;
+}
+
+body.night-mode .languages-used {
+  background: #002b5c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+
+  .project {
+    padding: 20px;
+  }
+
+  .project-image-container {
+    height: 180px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    border: 1px solid rgba(182, 115, 50, 0.1);
+  }
 }
 
 body.night-mode .modal-content {

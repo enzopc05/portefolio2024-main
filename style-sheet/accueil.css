@@ -206,48 +206,61 @@ h2 {
 /* Style des cartes de compétences et d'outils */
 .tool,
 .skill {
-  background-color: var(--bgColor); /* Fond basé sur la variable dynamique */
-  color: var(--color); /* Texte basé sur la variable dynamique */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: #fff; /* Fond blanc pour plus de contraste */
+  color: var(--color);
+  box-shadow: 0 4px 8px rgba(182, 115, 50, 0.2); /* Ombre légèrement colorée */
+  border: 2px solid var(--color); /* Bordure de la couleur principale */
   border-radius: 8px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  width: 150px; /* Largeur des cartes */
-  height: 150px; /* Hauteur des cartes */
+  transition: all 0.3s ease;
+  width: 150px;
+  height: 150px;
   display: flex;
-  justify-content: center; /* Centrage vertical */
-  align-items: center; /* Centrage horizontal */
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  padding: 10px; /* Espacement interne */
+  padding: 10px;
 }
 
 /* Logo centré dans la carte */
 .tool img,
 .skill img {
-  max-width: 60px; /* Taille maximale du logo */
+  max-width: 60px;
   height: auto;
   display: block;
-  margin: 0 auto; /* Centré horizontalement */
-  object-fit: contain; /* Maintenir le ratio du logo */
+  margin: 0 auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
 }
 
 /* Texte en bas de la carte */
 .tool p,
 .skill p {
-  color: var(--color); /* Texte qui s'adapte au thème */
+  color: var(--color);
   font-size: 0.9rem;
   font-weight: bold;
   margin: 10px 0 0 0;
   padding-top: 10px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Ligne subtile visible en mode nuit */
+  border-top: 2px solid rgba(182, 115, 50, 0.2);
 }
 
 /* Effet de hover */
-/* Hover pour les cartes en mode jour */
 .tool:hover,
 .skill:hover {
-  background-color: #d6cbbf; /* Beige plus foncé au survol */
-  color: #8a4f24; /* Marron plus foncé pour le texte */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Ombre subtile */
+  background-color: var(--color);
+  color: #fff;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(182, 115, 50, 0.3);
+}
+
+.tool:hover p,
+.skill:hover p {
+  color: #fff;
+  border-top-color: rgba(255, 255, 255, 0.2);
+}
+
+.tool:hover img,
+.skill:hover img {
+  transform: scale(1.1);
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
@@ -779,34 +792,32 @@ body.night-mode .skills-container {
   background-color: transparent; /* Fond transparent pour les conteneurs */
 }
 
+/* Mode nuit */
 body.night-mode .tool,
 body.night-mode .skill {
-  background-color: #002b5c; /* Fond bleu profond des cartes */
-  color: #d4e3fc; /* Blanc légèrement bleuté pour le texte */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  background-color: #003366;
+  border-color: #4cadad;
+  box-shadow: 0 4px 8px rgba(76, 173, 173, 0.2);
 }
 
-/* Hover pour les cartes en mode nuit */
-body.night-mode .tool:hover,
-body.night-mode .skill:hover {
-  background-color: #003366; /* Bleu légèrement plus clair */
-  color: #e6f0ff; /* Blanc pur pour le texte */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
-}
-
-body.night-mode .tool,
-body.night-mode .skill {
-  background-color: #002b5c; /* Bleu profond */
-  color: var(--color);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+body.night-mode .tool p,
+body.night-mode .skill p {
+  color: #e6f0ff;
+  border-top-color: rgba(76, 173, 173, 0.2);
 }
 
 body.night-mode .tool:hover,
 body.night-mode .skill:hover {
-  background-color: #003366; /* Bleu légèrement plus clair */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+  background-color: #4cadad;
+  color: #e6f0ff;
+  box-shadow: 0 8px 16px rgba(76, 173, 173, 0.3);
 }
 
+body.night-mode .tool:hover p,
+body.night-mode .skill:hover p {
+  color: #e6f0ff;
+  border-top-color: rgba(255, 255, 255, 0.2);
+}
 body.night-mode #timeline-section ul.timeline::before {
   background: #00509e; /* Bleu lumineux pour la ligne */
 }
