@@ -1,4 +1,4 @@
-// Night-mode
+// Mode nuit
 const toggleButton = document.getElementById("toggleNightMode");
 const icon = toggleButton.querySelector(".icon");
 
@@ -19,7 +19,7 @@ toggleButton.addEventListener("click", () => {
   }
 });
 
-//Trie par note
+// Trie des articles
 document.getElementById("sortByDate").addEventListener("click", function () {
   sortArticles("date");
 });
@@ -37,26 +37,46 @@ function sortArticles(criteria) {
     const bValue = b.dataset[criteria];
 
     if (criteria === "date") {
-      return new Date(aValue) - new Date(bValue);
+      return new Date(bValue) - new Date(aValue); // Tri décroissant pour les dates
     } else if (criteria === "note") {
       return bValue - aValue;
     }
   });
-  //trie par date
-  articlesContainer.innerHTML = "";
+
   articles.forEach((article) => articlesContainer.appendChild(article));
 }
 
-document.querySelectorAll(".toggle-detail").forEach((button) => {
-  button.addEventListener("click", function () {
-    const popup = document.getElementById("popup");
-    const summary = this.getAttribute("data-summary");
+// Gestion des boutons Voir Détails et Aller à l'Article
+document.addEventListener("DOMContentLoaded", function () {
+  // Gestion des boutons "Voir Détails"
+  document.querySelectorAll(".toggle-detail").forEach((button) => {
+    button.addEventListener("click", function () {
+      // Trouve le parent article
+      const article = this.closest(".article");
+      // Trouve le paragraphe de détails dans cet article
+      const articleDetail = article.querySelector(".article-detail");
 
-    document.getElementById("popupSummary").textContent = summary;
-    popup.classList.remove("hidden");
+      // Bascule l'affichage
+      if (
+        articleDetail.style.display === "none" ||
+        articleDetail.style.display === ""
+      ) {
+        articleDetail.style.display = "block";
+        this.textContent = "Masquer Détails";
+      } else {
+        articleDetail.style.display = "none";
+        this.textContent = "Voir Détails";
+      }
+    });
   });
-});
 
-document.getElementById("closePopup").addEventListener("click", function () {
-  document.getElementById("popup").classList.add("hidden");
+  // Gestion des boutons "Aller à l'Article"
+  document.querySelectorAll(".view-link").forEach((button) => {
+    button.addEventListener("click", function () {
+      const url = this.getAttribute("data-url");
+      if (url) {
+        window.open(url, "_blank");
+      }
+    });
+  });
 });
