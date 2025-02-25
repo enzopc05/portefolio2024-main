@@ -273,6 +273,34 @@ h2 {
   box-sizing: border-box;
 }
 
+/* Style des icônes Devicon dans les cartes de compétences */
+.tool i,
+.skill i {
+  font-size: 80px; /* Taille augmentée pour correspondre aux images */
+  display: block;
+  margin: 0 auto 15px;
+  transition: transform 0.3s ease;
+  height: 60px; /* Hauteur fixe pour correspondre aux images */
+  line-height: 60px; /* Alignement vertical */
+}
+
+/* Animation au survol */
+.tool:hover i,
+.skill:hover i {
+  transform: scale(1.1);
+}
+
+/* Pour conserver la même apparence sur les images non-Devicon */
+.tool img,
+.skill img {
+  max-width: 60px;
+  height: 60px; /* Hauteur fixe pour uniformité */
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
 /* Timeline container */
 #timeline-section ul.timeline {
   --col-gap: 2rem;

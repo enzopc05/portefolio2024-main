@@ -308,6 +308,31 @@ body.night-mode .tech-select:hover {
   margin-right: 15px;
 }
 
+/* Style des icônes Devicon dans les cartes de compétences */
+.tool i,
+.skill i {
+  font-size: 60px;
+  display: block;
+  margin: 0 auto 15px;
+  transition: transform 0.3s ease;
+}
+
+/* Animation au survol */
+.tool:hover i,
+.skill:hover i {
+  transform: scale(1.1);
+}
+
+/* Pour conserver la même apparence sur les images non-Devicon */
+.tool img,
+.skill img {
+  max-width: 60px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
 .project-detail p {
   color: #555;
   margin: 0;
