@@ -14,6 +14,10 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
   </head>
   <body>
     <!-- En-tête de la page avec le menu de navigation -->
@@ -22,7 +26,7 @@
         <div class="header-content">
           <div class="image-entete">
             <img
-              src="../personnage/personnage-soleil-sans-fond/DA846F_1-removebg-preview"
+              src="../personnage/personnage-soleil-sans-fond/DAD42A_1-removebg-preview.png"
               alt="Illustration décorative"
             />
           </div>
@@ -40,6 +44,15 @@
         <div class="theme-container">
           <button id="toggleNightMode" class="theme-toggle">
             <span class="icon">🌞</span>
+          </button>
+        </div>
+        <div class="contact-button-container">
+          <button
+            id="openContactModal"
+            class="contact-button"
+            aria-label="Ouvrir le formulaire de contact"
+          >
+            <i class="fas fa-envelope"></i>
           </button>
         </div>
       </div>
@@ -180,7 +193,7 @@
           <h3>Contact</h3>
           <p>
             <i class="fas fa-envelope"></i>
-            <a href="mailto:enzopace05@gmail.com">enzopace05@gmail.com</a>
+            <a href="mailto:enzopropace@gmail.com">enzopropace@gmail.com</a>
           </p>
           <p><i class="fas fa-phone"></i> 06 16 25 49 **</p>
           <p><i class="fas fa-map-marker-alt"></i> Paris, France</p>
@@ -221,14 +234,6 @@
               />
             </a>
           </div>
-
-          <!-- Section Newsletter (optionnelle) -->
-          <div class="footer-newsletter">
-            <form action="#" method="post">
-              <input type="email" placeholder="Votre email..." required />
-              <button type="submit">S'abonner</button>
-            </form>
-          </div>
         </div>
 
         <!-- Section Copyright -->
@@ -237,6 +242,41 @@
         </div>
       </div>
     </footer>
+
+    <!-- Modale de contact -->
+    <div id="contactModal" class="modal contact-modal">
+      <div class="modal-content contact-modal-content">
+        <span class="close">&times;</span>
+        <h2>Contactez-moi</h2>
+        <form action="https://formspree.io/f/xnnjklvn" method="POST">
+          <div class="form-group">
+            <label for="email">Votre adresse email</label>
+            <input
+              type="email"
+              id="email"
+              name="_replyto"
+              placeholder="Votre adresse email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Votre message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Votre message"
+              required
+            ></textarea>
+          </div>
+          <input
+            type="hidden"
+            name="_subject"
+            value="Nouveau message depuis le portfolio"
+          />
+          <button type="submit" class="submit-button">Envoyer</button>
+        </form>
+      </div>
+    </div>
     <script src="../dev-sheet/veille.js"></script>
   </body>
 </html>

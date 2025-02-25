@@ -80,3 +80,27 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// Ajout de la gestion de la modale de contact
+document.addEventListener("DOMContentLoaded", () => {
+  const contactModal = document.getElementById("contactModal");
+  const openContactModalBtn = document.getElementById("openContactModal");
+  const closeContactModalBtn = contactModal.querySelector(".close");
+
+  // Ouvrir la modale
+  openContactModalBtn.addEventListener("click", () => {
+    contactModal.style.display = "block";
+  });
+
+  // Fermer la modale en cliquant sur le bouton de fermeture
+  closeContactModalBtn.addEventListener("click", () => {
+    contactModal.style.display = "none";
+  });
+
+  // Fermer la modale en cliquant en dehors
+  window.addEventListener("click", (event) => {
+    if (event.target === contactModal) {
+      contactModal.style.display = "none";
+    }
+  });
+});

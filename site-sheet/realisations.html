@@ -11,7 +11,14 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&amp;display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
   </head>
   <body>
     <!-- En-tête avec le menu de navigation -->
@@ -19,7 +26,10 @@
       <div class="container">
         <div class="header-content">
           <div class="image-entete">
-            <img src="../personnage/personnage-soleil-sans-fond/57f3c35b-5142-41eb-870d-5b6ccaac22e8-removebg-preview" alt="Illustration décorative" />
+            <img
+              src="../personnage/personnage-soleil-sans-fond/c3a9af79-b575-4cb4-9dd7-743b9c97146c-removebg-preview"
+              alt="Illustration décorative"
+            />
           </div>
           <h1>Enzo Pace - Portfolio</h1>
         </div>
@@ -37,13 +47,21 @@
             <span class="icon">🌞</span>
           </button>
         </div>
+        <div class="contact-button-container">
+          <button
+            id="openContactModal"
+            class="contact-button"
+            aria-label="Ouvrir le formulaire de contact"
+          >
+            <i class="fas fa-envelope"></i>
+          </button>
+        </div>
       </div>
     </header>
-        
+
     <!-- Section principale des réalisations -->
     <main>
       <div class="container">
-
         <div class="filter-container">
           <div class="select-wrapper">
             <select id="techFilter" class="tech-select">
@@ -67,19 +85,22 @@
             <article class="project" data-tech="python javascript html">
               <h3>Les4Fantastiques</h3>
               <div class="project-image-container">
-              <img
-                alt="Image du projet école 1"
-                src="../picture/projetecole1.png"
-              />
-            </div>
+                <img
+                  alt="Image du projet école 1"
+                  src="../picture/projetecole1.png"
+                />
+              </div>
               <p>Requête à l'API Marvel afin d'avoir des résultats visuels</p>
               <button class="btn" data-modal="modal1">En savoir plus</button>
             </article>
             <article class="project" data-tech="java javafx">
               <h3>GhostTrack</h3>
               <div class="project-image-container">
-              <img alt="Image du projet école 2" src="../picture/ghosttrack.jpg" />
-            </div>
+                <img
+                  alt="Image du projet école 2"
+                  src="../picture/ghosttrack.jpg"
+                />
+              </div>
               <p>Logiciel de ticketing sur le thème des trains</p>
               <button class="btn" data-modal="modal2">En savoir plus</button>
             </article>
@@ -93,34 +114,34 @@
             <article class="project" data-tech="vba">
               <h3>Macro EXCEL</h3>
               <div class="project-image-container">
-              <img
-                alt="Image du projet entreprise 1"
-                src="../picture/projetentreprise1.png"
-              />
-            </div>
+                <img
+                  alt="Image du projet entreprise 1"
+                  src="../picture/projetentreprise1.png"
+                />
+              </div>
               <p>Amélioration d'une macro EXCEL</p>
               <button class="btn" data-modal="modal3">En savoir plus</button>
             </article>
             <article class="project" data-tech="vb6 python xml">
               <h3>API Amazon</h3>
               <div class="project-image-container">
-              <img
-                alt="Image du projet entreprise 2"
-                src="../picture/amazonprojetentreprise2.png"
-              />
-            </div>
+                <img
+                  alt="Image du projet entreprise 2"
+                  src="../picture/amazonprojetentreprise2.png"
+                />
+              </div>
               <p>Connexion et requête à l'API Amazon</p>
               <button class="btn" data-modal="modal4">En savoir plus</button>
             </article>
-            
+
             <article class="project" data-tech="csharp sql">
               <h3>API POM</h3>
               <div class="project-image-container">
-              <img
-                alt="Image du projet entreprise 3"
-                src="../picture/POM.jpg"
-              />
-            </div>
+                <img
+                  alt="Image du projet entreprise 3"
+                  src="../picture/POM.jpg"
+                />
+              </div>
               <p>Création d'une API</p>
               <button class="btn" data-modal="modal5">En savoir plus</button>
             </article>
@@ -240,48 +261,45 @@
             />
             <div class="languages-used">
               <img
-              alt="JavaFX"
-              class="language-logo"
-              src="../picture/jfxlogopad1-removebg-preview.png"
-            />
-            <i class="devicon-java-plain colored language-logo"></i>
-          </div>
+                alt="JavaFX"
+                class="language-logo"
+                src="../picture/jfxlogopad1-removebg-preview.png"
+              />
+              <i class="devicon-java-plain colored language-logo"></i>
             </div>
           </div>
-          <!-- Durée du projet -->
-          <div class="project-detail">
-            <img
-              alt="Durée"
-              class="icon"
-              src="../picture/horlogelogo-removebg-preview.png"
-            />
-            <p>4 mois</p>
-          </div>
         </div>
-        <p>Informations détaillées sur le projet réalisé à l'école.</p>
-        <div class="documents-section">
-          <h3>Accéder aux Documents</h3>
+        <!-- Durée du projet -->
+        <div class="project-detail">
+          <img
+            alt="Durée"
+            class="icon"
+            src="../picture/horlogelogo-removebg-preview.png"
+          />
+          <p>4 mois</p>
+        </div>
+      </div>
+      <p>Informations détaillées sur le projet réalisé à l'école.</p>
+      <div class="documents-section">
+        <h3>Accéder aux Documents</h3>
+        <p>
+          Veuillez entrer le mot de passe pour accéder aux documents liés à ce
+          projet.
+        </p>
+        <input
+          id="password_modal2"
+          placeholder="Mot de passe"
+          type="password"
+        /><button onclick="validatePassword('password_modal2', 'docs_modal2')">
+          Valider
+        </button>
+        <div id="docs_modal2" style="display: none; margin-top: 20px">
+          <h4>Documents disponibles</h4>
           <p>
-            Veuillez entrer le mot de passe pour accéder aux documents liés à ce
-            projet.
+            <a href="../doc/Maquette (1).png" target="_blank"
+              >Télécharger la maquette - Projet AlerTrain</a
+            >
           </p>
-          <input
-            id="password_modal2"
-            placeholder="Mot de passe"
-            type="password"
-          /><button
-            onclick="validatePassword('password_modal2', 'docs_modal2')"
-          >
-            Valider
-          </button>
-          <div id="docs_modal2" style="display: none; margin-top: 20px">
-            <h4>Documents disponibles</h4>
-            <p>
-              <a href="../doc/Maquette (1).png" target="_blank"
-                >Télécharger la maquette - Projet AlerTrain</a
-              >
-            </p>
-          </div>
         </div>
       </div>
     </div>
@@ -387,12 +405,12 @@
             />
             <div class="languages-used">
               <img
-              alt="VB6 Logo"
-              class="language-logo"
-              src="../picture/vb6-removebg-preview.png"
-            />
-            <i class="devicon-python-plain colored language-logo"></i>
-            <i class="devicon-xml-plain colored language-logo"></i>
+                alt="VB6 Logo"
+                class="language-logo"
+                src="../picture/vb6-removebg-preview.png"
+              />
+              <i class="devicon-python-plain colored language-logo"></i>
+              <i class="devicon-xml-plain colored language-logo"></i>
             </div>
           </div>
           <!-- Durée du projet -->
@@ -438,149 +456,209 @@
       </div>
     </div>
 
-        <!-- Modale pour Projet Entreprise 3 -->
-        <div class="modal" id="modal5">
-          <div class="modal-content">
-            <span class="close">×</span>
-            <h2>Détails du Projet</h2>
-            <div class="project-info">
-              <!-- Participants -->
-              <div class="project-detail">
-                <img
-                  alt="Participants"
-                  class="icon"
-                  src="../picture/equipe-removebg-preview.png"
-                />
-                <p>1 Participants</p>
-              </div>
-              <!-- Technologies utilisées -->
-              <div class="project-detail">
-                <img
-                  alt="Technologies"
-                  class="icon"
-                  src="../picture/ordi-removebg-preview.png"
-                />
-                <div class="languages-used">
-                  <i class="devicon-csharp-plain colored language-logo"></i>
-                  <i class="devicon-mysql-plain colored language-logo"></i>
-                </div>
-              </div>
-              <!-- Durée du projet -->
-              <div class="project-detail">
-                <img
-                  alt="Durée"
-                  class="icon"
-                  src="../picture/horlogelogo-removebg-preview.png"
-                />
-                <p>1 semaine</p>
-              </div>
+    <!-- Modale pour Projet Entreprise 3 -->
+    <div class="modal" id="modal5">
+      <div class="modal-content">
+        <span class="close">×</span>
+        <h2>Détails du Projet</h2>
+        <div class="project-info">
+          <!-- Participants -->
+          <div class="project-detail">
+            <img
+              alt="Participants"
+              class="icon"
+              src="../picture/equipe-removebg-preview.png"
+            />
+            <p>1 Participants</p>
+          </div>
+          <!-- Technologies utilisées -->
+          <div class="project-detail">
+            <img
+              alt="Technologies"
+              class="icon"
+              src="../picture/ordi-removebg-preview.png"
+            />
+            <div class="languages-used">
+              <i class="devicon-csharp-plain colored language-logo"></i>
+              <i class="devicon-mysql-plain colored language-logo"></i>
             </div>
-            <div class="project-description">
-      <p>Ce projet est une API développée en ASP.NET Core pour une solution de gestion commerciale. L'application permet de gérer les entités principales suivantes :</p>
-      
-      <ul>
-        <li>Clients</li>
-        <li>Produits</li>
-        <li>Commandes</li>
-        <li>Lignes de commandes</li>
-      </ul>
-
-      <h3>Principales Caractéristiques</h3>
-      <ul>
-        <li>Une API REST sécurisée avec authentification par clé API</li>
-        <li>Une connexion flexible à différents types de bases de données (MySQL et SQL Server)</li>
-        <li>Des contrôleurs pour chaque entité permettant des opérations CRUD (Create, Read, Update, Delete)</li>
-        <li>Un système de middleware pour la validation des clés API</li>
-        <li>Une configuration dynamique de la connexion à la base de données via un fichier de configuration</li>
-      </ul>
-
-      <p>L'objectif principal est de fournir une interface technique permettant à un client de récupérer et de gérer ses données commerciales de manière automatisée et sécurisée.</p>
-
-      <p>Un point intéressant est également la présence d'un service de transfert de données qui permet de synchroniser les données entre différentes bases de données.</p>
-    </div>
-            <div class="documents-section">
-              <h3>Accéder aux Documents</h3>
-              <p>
-                Veuillez entrer le mot de passe pour accéder aux documents liés à ce
-                projet.
-              </p>
-              <input
-                id="password_modal3"
-                placeholder="Mot de passe"
-                type="password"
-              /><button
-                onclick="validatePassword('password_modal3', 'docs_modal3')"
-              >
-                Valider
-              </button>
-              <div id="docs_modal3" style="display: none; margin-top: 20px">
-                <h4>Documents disponibles</h4>
-                <p>
-                  <a href="path/to/modal3_doc1.pdf" target="_blank"
-                    >Télécharger le document 1 - Macro EXCEL</a
-                  >
-                </p>
-                <p>
-                  <a href="path/to/modal3_doc2.pdf" target="_blank"
-                    >Télécharger le document 2 - Macro EXCEL</a
-                  >
-                </p>
-              </div>
-            </div>
+          </div>
+          <!-- Durée du projet -->
+          <div class="project-detail">
+            <img
+              alt="Durée"
+              class="icon"
+              src="../picture/horlogelogo-removebg-preview.png"
+            />
+            <p>1 semaine</p>
           </div>
         </div>
-        <footer>
-          <div class="container">
-            <!-- Section Contact -->
-            <div class="footer-contact">
-              <h3>Contact</h3>
-              <p><i class="fas fa-envelope"></i> <a href="mailto:enzopace05@gmail.com">enzopace05@gmail.com</a></p>
-              <p><i class="fas fa-phone"></i> 06 16 25 49 **</p>
-              <p><i class="fas fa-map-marker-alt"></i> Paris, France</p>
-            </div>
-            
-            <!-- Section Liens Rapides -->
-            <div class="footer-links">
-              <h3>Liens Rapides</h3>
-              <ul>
-                <li><a href="accueil.html">Accueil</a></li>
-                <li><a href="entreprise.html">Entreprise</a></li>
-                <li><a href="realisations.html">Réalisations</a></li>
-                <li><a href="veille.html">Veille</a></li>
-                <li><a href="bilan.html">Bilan</a></li>
-              </ul>
-            </div>
-            
-            <!-- Section Réseaux Sociaux -->
-            <div class="footer-social">
-              <h3>Réseaux Sociaux</h3>
-              <div class="social-icons">
-                <a href="https://linkedin.com" target="_blank">
-                  <img src="../picture/logo-linkedin-noir.jpg" alt="LinkedIn" />
-                </a>
-                <a href="https://www.instagram.com/enzo.sunchine/profilecard/?igsh=bHphdDNjeHd3aHdj" target="_blank">
-                  <img src="../picture/logo-instagram-noir-png.jpg" alt="Instagram" />
-                </a>
-                <a href="https://github.com/enzopc05" target="_blank">
-                  <img src="../picture/githublogo-removebg-preview.png" alt="GitHub" />
-                </a>
-              </div>
-              
-              <!-- Section Newsletter (optionnelle) -->
-              <div class="footer-newsletter">
-                <form action="#" method="post">
-                  <input type="email" placeholder="Votre email..." required />
-                  <button type="submit">S'abonner</button>
-                </form>
-              </div>
-            </div>
-            
-            <!-- Section Copyright -->
-            <div class="footer-bottom">
-              <p>© Enzo Pace 2024 | Tous droits réservés</p>
-            </div>
+        <div class="project-description">
+          <p>
+            Ce projet est une API développée en ASP.NET Core pour une solution
+            de gestion commerciale. L'application permet de gérer les entités
+            principales suivantes :
+          </p>
+
+          <ul>
+            <li>Clients</li>
+            <li>Produits</li>
+            <li>Commandes</li>
+            <li>Lignes de commandes</li>
+          </ul>
+
+          <h3>Principales Caractéristiques</h3>
+          <ul>
+            <li>Une API REST sécurisée avec authentification par clé API</li>
+            <li>
+              Une connexion flexible à différents types de bases de données
+              (MySQL et SQL Server)
+            </li>
+            <li>
+              Des contrôleurs pour chaque entité permettant des opérations CRUD
+              (Create, Read, Update, Delete)
+            </li>
+            <li>Un système de middleware pour la validation des clés API</li>
+            <li>
+              Une configuration dynamique de la connexion à la base de données
+              via un fichier de configuration
+            </li>
+          </ul>
+
+          <p>
+            L'objectif principal est de fournir une interface technique
+            permettant à un client de récupérer et de gérer ses données
+            commerciales de manière automatisée et sécurisée.
+          </p>
+
+          <p>
+            Un point intéressant est également la présence d'un service de
+            transfert de données qui permet de synchroniser les données entre
+            différentes bases de données.
+          </p>
+        </div>
+        <div class="documents-section">
+          <h3>Accéder aux Documents</h3>
+          <p>
+            Veuillez entrer le mot de passe pour accéder aux documents liés à ce
+            projet.
+          </p>
+          <input
+            id="password_modal3"
+            placeholder="Mot de passe"
+            type="password"
+          /><button
+            onclick="validatePassword('password_modal3', 'docs_modal3')"
+          >
+            Valider
+          </button>
+          <div id="docs_modal3" style="display: none; margin-top: 20px">
+            <h4>Documents disponibles</h4>
+            <p>
+              <a href="path/to/modal3_doc1.pdf" target="_blank"
+                >Télécharger le document 1 - Macro EXCEL</a
+              >
+            </p>
+            <p>
+              <a href="path/to/modal3_doc2.pdf" target="_blank"
+                >Télécharger le document 2 - Macro EXCEL</a
+              >
+            </p>
           </div>
-        </footer>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <!-- Section Contact -->
+        <div class="footer-contact">
+          <h3>Contact</h3>
+          <p>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:enzopropace@gmail.com">enzopropace@gmail.com</a>
+          </p>
+          <p><i class="fas fa-phone"></i> 06 16 25 49 **</p>
+          <p><i class="fas fa-map-marker-alt"></i> Paris, France</p>
+        </div>
+
+        <!-- Section Liens Rapides -->
+        <div class="footer-links">
+          <h3>Liens Rapides</h3>
+          <ul>
+            <li><a href="accueil.html">Accueil</a></li>
+            <li><a href="entreprise.html">Entreprise</a></li>
+            <li><a href="realisations.html">Réalisations</a></li>
+            <li><a href="veille.html">Veille</a></li>
+            <li><a href="bilan.html">Bilan</a></li>
+          </ul>
+        </div>
+
+        <!-- Section Réseaux Sociaux -->
+        <div class="footer-social">
+          <h3>Réseaux Sociaux</h3>
+          <div class="social-icons">
+            <a href="https://linkedin.com" target="_blank">
+              <img src="../picture/logo-linkedin-noir.jpg" alt="LinkedIn" />
+            </a>
+            <a
+              href="https://www.instagram.com/enzo.sunchine/profilecard/?igsh=bHphdDNjeHd3aHdj"
+              target="_blank"
+            >
+              <img
+                src="../picture/logo-instagram-noir-png.jpg"
+                alt="Instagram"
+              />
+            </a>
+            <a href="https://github.com/enzopc05" target="_blank">
+              <img
+                src="../picture/githublogo-removebg-preview.png"
+                alt="GitHub"
+              />
+            </a>
+          </div>
+        </div>
+
+        <!-- Section Copyright -->
+        <div class="footer-bottom">
+          <p>© Enzo Pace 2024 | Tous droits réservés</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modale de contact -->
+    <div id="contactModal" class="modal contact-modal">
+      <div class="modal-content contact-modal-content">
+        <span class="close">&times;</span>
+        <h2>Contactez-moi</h2>
+        <form action="https://formspree.io/f/xnnjklvn" method="POST">
+          <div class="form-group">
+            <label for="email">Votre adresse email</label>
+            <input
+              type="email"
+              id="email"
+              name="_replyto"
+              placeholder="Votre adresse email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Votre message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Votre message"
+              required
+            ></textarea>
+          </div>
+          <input
+            type="hidden"
+            name="_subject"
+            value="Nouveau message depuis le portfolio"
+          />
+          <button type="submit" class="submit-button">Envoyer</button>
+        </form>
+      </div>
+    </div>
     <!-- Script pour gérer les modales -->
     <script src="../dev-sheet/realisations.js"></script>
     <script src="../dev-sheet/night-mode"></script>
