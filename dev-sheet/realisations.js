@@ -67,39 +67,74 @@ toggleButton.addEventListener("click", () => {
   }
 });
 
-// Système de filtrage des projets
+// Système de filtrage des projets avec animations
 document.addEventListener("DOMContentLoaded", function () {
   const techSelect = document.getElementById("techFilter");
   const projects = document.querySelectorAll(".project");
 
+  // Animation d'entrée initiale pour tous les projets
+  projects.forEach((project, index) => {
+    setTimeout(() => {
+      project.classList.add("fade-in");
+    }, index * 100); // Délai progressif pour chaque projet
+  });
+
   techSelect.addEventListener("change", function () {
     const selectedTech = this.value;
+    const visibleProjects = []; // Projets qui correspondent au filtre
 
+    // Première étape : déterminer quels projets doivent être affichés/masqués
     projects.forEach((project) => {
       const projectTechs = project.getAttribute("data-tech") || "";
 
-      if (selectedTech === "all") {
-        // Afficher tous les projets
-        project.style.opacity = "1";
-        project.style.transform = "scale(1)";
-        project.style.display = "block";
-      } else if (projectTechs.includes(selectedTech)) {
-        // Afficher les projets qui correspondent au filtre
-        project.style.display = "block";
-        setTimeout(() => {
-          project.style.opacity = "1";
-          project.style.transform = "scale(1)";
-        }, 10);
+      if (selectedTech === "all" || projectTechs.includes(selectedTech)) {
+        visibleProjects.push(project);
       } else {
-        // Cacher les projets qui ne correspondent pas
-        project.style.opacity = "0";
-        project.style.transform = "scale(0.8)";
-        setTimeout(() => {
-          project.style.display = "none";
-        }, 300);
+        // Animer la disparition
+        project.classList.add("fade-out");
+        project.classList.remove("fade-in", "bounce");
       }
     });
+
+    // Deuxième étape : après la disparition, reconfigurer l'affichage
+    setTimeout(() => {
+      projects.forEach((project) => {
+        if (visibleProjects.includes(project)) {
+          // Si le projet était déjà visible, faire un petit "bounce"
+          if (!project.classList.contains("fade-out")) {
+            project.classList.add("bounce");
+          } else {
+            // Sinon, faire apparaître le projet
+            project.classList.remove("fade-out");
+            project.classList.add("fade-in");
+          }
+          project.style.display = "flex";
+        } else {
+          // Cacher complètement après l'animation
+          project.style.display = "none";
+        }
+      });
+
+      // Réorganiser la disposition de la grille
+      arrangeProjectsGrid();
+    }, 400); // Attendre que l'animation de disparition soit complète
   });
+
+  // Fonction pour réarranger la grille des projets
+  function arrangeProjectsGrid() {
+    const container = document.querySelector(".projects-container");
+    const visibleProjects = Array.from(projects).filter(
+      (p) => p.style.display !== "none"
+    );
+
+    // Réinitialiser les styles de la grille si nécessaire
+    if (visibleProjects.length === 0) {
+      container.innerHTML =
+        '<p class="no-results">Aucun projet ne correspond à ce filtre.</p>';
+    } else if (container.querySelector(".no-results")) {
+      container.querySelector(".no-results").remove();
+    }
+  }
 });
 
 // Ajout de la gestion de la modale de contact

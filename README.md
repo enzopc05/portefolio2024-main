@@ -140,11 +140,9 @@ techSelect.addEventListener("change", function () {
 
 (Ajoutez vos idées d'améliorations ici)
 
-- Réalisations -> Implémentant une animation de transition quand les projets apparaissent/disparaissent
 - Réalisations -> Créer une visualisation interactive de vos compétences (par exemple, un graphique radar)
 - Réalisations -> un système de filtres plus avancé
 - Ajouter des effets de parallaxe subtils pour donner de la profondeur
-- Ajouter des animations lorsque l'utilisateur défile (animations au scroll)
 - Implémenter un système de retour en haut de page élégant
 - Système de changement de langue (français/anglais)
 - Plusieurs thèmes de couleurs personnalisables
