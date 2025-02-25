@@ -15,17 +15,51 @@ body {
 }
 
 /* En-tête */
+/* Header amélioré */
 header {
-  background-color: rgba(218, 171, 58, 0.8); /* Jaune doré avec transparence */
+  background: linear-gradient(135deg, #daab3a, #b67332);
   color: #fff;
-  padding: 20px 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 25px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   position: sticky;
   top: 0;
   width: 100%;
   z-index: 1000;
-  backdrop-filter: blur(10px); /* Effet de flou */
-  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background: #daab3a;
+  clip-path: polygon(
+    0 0,
+    5% 100%,
+    10% 0,
+    15% 100%,
+    20% 0,
+    25% 100%,
+    30% 0,
+    35% 100%,
+    40% 0,
+    45% 100%,
+    50% 0,
+    55% 100%,
+    60% 0,
+    65% 100%,
+    70% 0,
+    75% 100%,
+    80% 0,
+    85% 100%,
+    90% 0,
+    95% 100%,
+    100% 0
+  );
+  z-index: 1;
 }
 
 header .container {
@@ -35,65 +69,155 @@ header .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  position: relative;
 }
 
 .header-content {
-  display: flex; /* Aligne l'image et le titre horizontalement */
-  align-items: center; /* Centre l'image et le texte verticalement */
-  gap: 1rem; /* Espacement entre l'image et le titre */
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 }
 
-/* Conteneur pour l'image */
 .image-entete {
-  max-width: 85px; /* Limite la largeur maximale de l'image */
-  margin-right: 1rem; /* Espacement entre l'image et le texte */
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border: 3px solid rgba(255, 255, 255, 0.6);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.image-entete::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(255, 255, 255, 0.4),
+    transparent 70%
+  );
+  z-index: 2;
 }
 
 .image-entete img {
-  content: url("../personnage/personnage-soleil-sans-fond/DA846F_1-removebg-preview.png");
-  width: 100%; /* L'image s'adapte à la largeur du conteneur */
-  height: auto; /* Conserve les proportions de l'image */
-  display: block; /* Assure que l'image reste un bloc */
+  content: url("../personnage/personnage-soleil-sans-fond/DAD42A_1-removebg-preview.png");
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.header-content:hover .image-entete {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
 header h1 {
   margin: 0;
-  font-size: 2rem;
+  font-size: 2.2rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+header h1::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 80px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.header-content:hover h1::after {
+  width: 100%;
+}
+
+/* Navigation */
+nav {
+  margin-right: 15px;
 }
 
 nav ul {
   list-style: none;
   padding: 0;
   display: flex;
+  gap: 10px;
 }
 
 nav ul li {
-  margin: 0 15px;
+  position: relative;
 }
 
 nav ul li a {
   color: #fff;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 8px 15px;
+  border-radius: 30px;
+  display: block;
+  transition: all 0.3s ease;
   position: relative;
-  padding-bottom: 5px;
+  z-index: 1;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-/* L'élément de soulignement (invisible au départ) */
+nav ul li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 30px;
+  z-index: -1;
+  transform: scale(0.7, 0);
+  opacity: 0;
+  transition: all 0.3s ease;
+  transform-origin: bottom;
+}
+
+nav ul li a:hover {
+  transform: translateY(-3px);
+}
+
+nav ul li a:hover::before {
+  transform: scale(1);
+  opacity: 1;
+}
+
 nav ul li a::after {
   content: "";
   position: absolute;
+  bottom: 0;
+  left: 50%;
   width: 0;
   height: 2px;
-  left: 0;
-  bottom: 0;
-  background-color: var(--bgColor);
+  background-color: #fff;
+  transform: translateX(-50%);
   transition: width 0.3s ease;
+  border-radius: 2px;
 }
 
-/* Soulignement visible au hover */
 nav ul li a:hover::after {
-  width: 100%;
+  width: 60%;
+}
+
+/* Conteneur du bouton de thème */
+.theme-container {
+  position: relative;
+  z-index: 2;
 }
 
 /* Lorsque le header devient opaque au scroll */
@@ -611,22 +735,73 @@ body.night-mode {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Adaptation pour le mode nuit */
 body.night-mode header {
-  background-color: #003366; /* Bleu légèrement plus clair */
-  color: #e6f0ff; /* Blanc pur pour le texte */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Ombre subtile */
+  background: linear-gradient(135deg, #003366, #001f3f);
 }
 
-body.night-mode nav ul li a {
-  color: #c0d6f2; /* Bleu clair pour les liens */
+body.night-mode header::after {
+  background: #003366;
 }
 
-body.night-mode nav ul li a:hover {
-  color: #ffffff; /* Blanc pur au survol */
+body.night-mode .image-entete {
+  border-color: rgba(76, 173, 173, 0.4);
 }
 
 body.night-mode .image-entete img {
-  content: url("../personnage/personnage-lune-sans-fond/DALLE2_1-removebg-preview.png"); /* Chemin de l'image pour le mode nuit */
+  content: url("../personnage/personnage-lune-sans-fond/DALLE2_1-removebg-preview.png");
+}
+
+body.night-mode header h1::after {
+  background-color: #4cadad;
+}
+
+body.night-mode nav ul li a::before {
+  background-color: rgba(76, 173, 173, 0.15);
+}
+
+body.night-mode nav ul li a::after {
+  background-color: #4cadad;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header .container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .header-content {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  nav {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav ul li a {
+    font-size: 0.95rem;
+    padding: 6px 12px;
+  }
+
+  .theme-container {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+  }
 }
 
 body.night-mode section {
