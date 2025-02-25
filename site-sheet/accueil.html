@@ -10,6 +10,10 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
   </head>
   <body>
     <header>
@@ -33,9 +37,11 @@
             <li><a href="bilan.html">Bilan</a></li>
           </ul>
         </nav>
-        <button id="toggleNightMode" class="theme-toggle">
-          <span class="icon">🌞</span>
-      </div>
+        <div class="theme-container">
+          <button id="toggleNightMode" class="theme-toggle">
+            <span class="icon">🌞</span>
+          </button>
+        </div>
       </div>
     </header>
 
@@ -94,7 +100,7 @@
             </li>
           </ul>
         </section>
-        
+
         <div class="credits">
           <a
             target="_blank"
@@ -108,39 +114,27 @@
           <h2>Langages</h2>
           <div class="skills-container">
             <div class="skill">
-              <img
-                src="../picture/pythonlogo-removebg-preview.png"
-                alt="Python Logo"
-              />
+              <i class="devicon-python-plain colored"></i>
               <p>Python</p>
             </div>
             <div class="skill">
-              <img src="../picture/jslogo.jpg" alt="JavaScript Logo" />
+              <i class="devicon-javascript-plain colored"></i>
               <p>JavaScript</p>
             </div>
             <div class="skill">
-              <img
-                src="../picture/htmllogo-removebg-preview.png"
-                alt="HTML Logo"
-              />
+              <i class="devicon-html5-plain colored"></i>
               <p>HTML</p>
             </div>
             <div class="skill">
-              <img
-                src="../picture/csslogo-removebg-preview.png"
-                alt="CSS Logo"
-              />
+              <i class="devicon-css3-plain colored"></i>
               <p>CSS</p>
             </div>
-
             <div class="skill">
-              <img
-                src="../picture/javalogo-removebg-preview.png"
-                alt="Java Logo"
-              />
+              <i class="devicon-java-plain colored"></i>
               <p>Java</p>
             </div>
             <div class="skill">
+              <!-- VBA n'est pas dans Devicon, on garde l'image -->
               <img
                 src="../picture/vbalogo-removebg-preview.png"
                 alt="VBA Logo"
@@ -148,29 +142,22 @@
               <p>VBA</p>
             </div>
             <div class="skill">
-              <img
-                src="../picture/csharplogo-removebg-preview.png"
-                alt="C# Logo"
-              />
+              <i class="devicon-csharp-plain colored"></i>
               <p>C#</p>
             </div>
-
             <div class="skill">
-              <img
-                src="../picture/phplogo-removebg-preview.png"
-                alt="PHP Logo"
-              />
+              <i class="devicon-php-plain colored"></i>
               <p>PHP</p>
             </div>
-
             <div class="skill">
+              <!-- JavaFX n'est pas dans Devicon, on garde l'image -->
               <img
                 src="../picture/jfxlogopad1-removebg-preview.png"
                 alt="JFX Logo"
               />
               <p>JavaFX</p>
             </div>
-
+          </div>
         </section>
 
         <!-- Outils Utilisés -->
@@ -178,57 +165,41 @@
           <h2>Outils</h2>
           <div class="tools-container">
             <div class="tool">
-              <img
-                src="../picture/vscodelogo-removebg-preview.png"
-                alt="VS Code Logo"
-              />
+              <i class="devicon-vscode-plain colored"></i>
               <p>VS Code</p>
             </div>
             <div class="tool">
-              <img
-                src="../picture/IntelliJ_IDEA_Icon.svg-removebg-preview.png"
-                alt="IntelliJ Logo"
-              />
+              <i class="devicon-intellij-plain colored"></i>
               <p>IntelliJ IDEA</p>
             </div>
             <div class="tool">
-              <img
-                src="../picture/WAMPlogo-removebg-preview.png"
-                alt="WAMP Logo"
-              />
+              <!-- WAMP n'a pas d'icône spécifique, on peut utiliser Apache ou PHP -->
+              <i class="devicon-apache-plain colored"></i>
               <p>WAMP</p>
             </div>
             <div class="tool">
-              <img
-                src="../picture/githublogo-removebg-preview.png"
-                alt="GitHub Logo"
-              />
+              <i class="devicon-github-original colored"></i>
               <p>GitHub</p>
             </div>
             <div class="tool">
-              <img src="../picture/notionlogo.png" alt="Notion Logo" />
+              <i class="devicon-notion-plain colored"></i>
               <p>Notion</p>
             </div>
             <div class="tool">
+              <!-- VB6 n'est pas dans Devicon, on garde l'image -->
               <img src="../picture/vb6-removebg-preview.png" alt="VB6 Logo" />
               <p>VB6</p>
             </div>
             <div class="tool">
-              <img src="../picture/xmllogo-removebg-preview.png" alt="XML Logo" />
+              <i class="devicon-xml-plain colored"></i>
               <p>XML</p>
             </div>
             <div class="tool">
-              <img
-                src="../picture/sqlogov2-removebg-preview.png"
-                alt="SQL Logo"
-              />
+              <i class="devicon-mysql-plain colored"></i>
               <p>SQL</p>
             </div>
             <div class="tool">
-              <img
-                src="../picture/postman-removebg-preview.png"
-                alt="PostMan Logo"
-              />
+              <i class="devicon-postman-plain colored"></i>
               <p>PostMan</p>
             </div>
           </div>
@@ -271,26 +242,46 @@
       <div class="modal-content">
         <span class="close">&times;</span>
         <h2>Détails sur le BTS SIO SLAM</h2>
-          <p>
-            <span class="description">Le BTS SIO SLAM est une formation en informatique dédiée au développement logiciel et aux solutions métiers. Il prépare les étudiants à concevoir, développer et maintenir des applications informatiques adaptées aux besoins des entreprises.</span>
-          </p>
-          
-          <p class="details">
-            <span class="subheading">Cette formation, répartie sur deux ans, propose une alternance entre cours théoriques et projets pratiques, permettant d'acquérir des compétences solides dans les domaines suivants :</span>
-          </p>
-          
-          <ul class="skills-list">
-            <li><strong>Programmation :</strong> Python, Java, JavaScript, etc.</li>
-            <li><strong>Développement web :</strong> HTML, CSS, PHP, SQL.</li>
-            <li><strong>Gestion de projets informatiques :</strong> méthodologies agiles, cycles en V.</li>
-            <li><strong>Sécurité informatique :</strong> administration des systèmes et principes de cybersécurité.</li>
-          </ul>
-          
-          <p class="details">
-            <span class="closing">
-              Grâce à des projets variés, le BTS SLAM développe des compétences en analyse, en conception et en gestion des solutions logicielles, ouvrant ainsi de nombreuses opportunités professionnelles dans le domaine IT.
-            </span>
-          </p>
+        <p>
+          <span class="description"
+            >Le BTS SIO SLAM est une formation en informatique dédiée au
+            développement logiciel et aux solutions métiers. Il prépare les
+            étudiants à concevoir, développer et maintenir des applications
+            informatiques adaptées aux besoins des entreprises.</span
+          >
+        </p>
+
+        <p class="details">
+          <span class="subheading"
+            >Cette formation, répartie sur deux ans, propose une alternance
+            entre cours théoriques et projets pratiques, permettant d'acquérir
+            des compétences solides dans les domaines suivants :</span
+          >
+        </p>
+
+        <ul class="skills-list">
+          <li>
+            <strong>Programmation :</strong> Python, Java, JavaScript, etc.
+          </li>
+          <li><strong>Développement web :</strong> HTML, CSS, PHP, SQL.</li>
+          <li>
+            <strong>Gestion de projets informatiques :</strong> méthodologies
+            agiles, cycles en V.
+          </li>
+          <li>
+            <strong>Sécurité informatique :</strong> administration des systèmes
+            et principes de cybersécurité.
+          </li>
+        </ul>
+
+        <p class="details">
+          <span class="closing">
+            Grâce à des projets variés, le BTS SLAM développe des compétences en
+            analyse, en conception et en gestion des solutions logicielles,
+            ouvrant ainsi de nombreuses opportunités professionnelles dans le
+            domaine IT.
+          </span>
+        </p>
       </div>
     </div>
 
@@ -298,35 +289,67 @@
       <div class="modal-content">
         <span class="close">&times;</span>
         <h2>Détails sur RE/MAX France</h2>
-          <p>
-            Fondée en <strong>1973</strong> aux États-Unis, <strong>RE/MAX</strong> (Real Estate Maximum) est aujourd’hui un réseau immobilier international de premier plan, présent dans plus de <strong>110 pays</strong>. Depuis son arrivée en France, RE/MAX s’est imposée comme un acteur majeur du secteur immobilier, avec une approche centrée sur l’innovation et la performance.
-          </p>
-          
-          <h3>Les valeurs de RE/MAX France</h3>
-            <p>
-              Chez RE/MAX France, l’objectif est de transformer l’expérience immobilière grâce à :
-            </p>
-            <ul>
-              <li><strong>L’expertise des agents :</strong> un réseau de professionnels expérimentés et régulièrement formés pour répondre aux besoins spécifiques de chaque client.</li>
-              <li><strong>L’innovation technologique :</strong> des outils performants pour faciliter les transactions, optimiser la visibilité des biens, et offrir un service personnalisé.</li>
-              <li><strong>La collaboration :</strong> une culture d’entreprise forte qui valorise le travail d’équipe et les partenariats.</li>
-            </ul>
-            
-          <h3>Mon rôle chez RE/MAX France</h3>
-            <p>
-              Durant mon alternance au sein de RE/MAX France, j’ai eu l’opportunité de contribuer à divers projets en tant qu’assistant chef de projet IT, notamment :
-            </p>
-            <ul>
-              <li><strong>Support informatique</strong> auprès des franchises du réseau.</li>
-              <li><strong>Gestion des flux XML</strong>, permettant d’assurer un échange fluide d’informations entre les plateformes.</li>
-              <li><strong>Analyse et correction de bugs</strong> sur le CRM, garantissant une expérience utilisateur optimale.</li>
-            </ul>
-          
-          <h3>Une expérience formatrice</h3>
-          <p>
-            Cette expérience m’a permis de développer mes compétences en gestion de projet informatique, en résolution de problèmes techniques, et en communication avec différents acteurs du réseau. Travailler dans un environnement innovant et dynamique comme celui de RE/MAX France a également renforcé mon adaptabilité et ma capacité à travailler en équipe.
-          </p>
-                
+        <p>
+          Fondée en <strong>1973</strong> aux États-Unis,
+          <strong>RE/MAX</strong> (Real Estate Maximum) est aujourd’hui un
+          réseau immobilier international de premier plan, présent dans plus de
+          <strong>110 pays</strong>. Depuis son arrivée en France, RE/MAX s’est
+          imposée comme un acteur majeur du secteur immobilier, avec une
+          approche centrée sur l’innovation et la performance.
+        </p>
+
+        <h3>Les valeurs de RE/MAX France</h3>
+        <p>
+          Chez RE/MAX France, l’objectif est de transformer l’expérience
+          immobilière grâce à :
+        </p>
+        <ul>
+          <li>
+            <strong>L’expertise des agents :</strong> un réseau de
+            professionnels expérimentés et régulièrement formés pour répondre
+            aux besoins spécifiques de chaque client.
+          </li>
+          <li>
+            <strong>L’innovation technologique :</strong> des outils performants
+            pour faciliter les transactions, optimiser la visibilité des biens,
+            et offrir un service personnalisé.
+          </li>
+          <li>
+            <strong>La collaboration :</strong> une culture d’entreprise forte
+            qui valorise le travail d’équipe et les partenariats.
+          </li>
+        </ul>
+
+        <h3>Mon rôle chez RE/MAX France</h3>
+        <p>
+          Durant mon alternance au sein de RE/MAX France, j’ai eu l’opportunité
+          de contribuer à divers projets en tant qu’assistant chef de projet IT,
+          notamment :
+        </p>
+        <ul>
+          <li>
+            <strong>Support informatique</strong> auprès des franchises du
+            réseau.
+          </li>
+          <li>
+            <strong>Gestion des flux XML</strong>, permettant d’assurer un
+            échange fluide d’informations entre les plateformes.
+          </li>
+          <li>
+            <strong>Analyse et correction de bugs</strong> sur le CRM,
+            garantissant une expérience utilisateur optimale.
+          </li>
+        </ul>
+
+        <h3>Une expérience formatrice</h3>
+        <p>
+          Cette expérience m’a permis de développer mes compétences en gestion
+          de projet informatique, en résolution de problèmes techniques, et en
+          communication avec différents acteurs du réseau. Travailler dans un
+          environnement innovant et dynamique comme celui de RE/MAX France a
+          également renforcé mon adaptabilité et ma capacité à travailler en
+          équipe.
+        </p>
       </div>
     </div>
 
@@ -334,34 +357,63 @@
       <div class="modal-content">
         <span class="close">&times;</span>
         <h2>Détails sur Eurodislog</h2>
-          <p class="eurodislog-paragraph">
-            <strong>Eurodislog</strong> est une entreprise spécialisée dans la logistique et les services d’approvisionnement. Elle accompagne ses clients en leur proposant des solutions innovantes pour optimiser leurs chaînes d’approvisionnement et améliorer leur efficacité opérationnelle. Grâce à son expertise, Eurodislog se positionne comme un acteur incontournable dans son secteur.
-          </p>
-        
-          <h3 class="eurodislog-subtitle">Les forces d'Eurodislog</h3>
-          <p class="eurodislog-paragraph">
-            Eurodislog se distingue par :
-          </p>
-          <ul class="eurodislog-list">
-            <li><strong>Une intégration technologique avancée :</strong> utilisation d'API et de solutions informatiques pour automatiser et optimiser les processus logistiques.</li>
-            <li><strong>Une expertise métier :</strong> une compréhension approfondie des besoins spécifiques des entreprises en matière de chaîne d'approvisionnement.</li>
-            <li><strong>Une innovation constante :</strong> des outils et solutions adaptés aux enjeux modernes de la logistique.</li>
-          </ul>
-        
-          <h3 class="eurodislog-subtitle">Mon rôle chez Eurodislog</h3>
-          <p class="eurodislog-paragraph">
-            En tant qu’alternant chez Eurodislog, je suis principalement impliqué dans des projets de développement informatique, notamment :
-          </p>
-          <ul class="eurodislog-list">
-            <li><strong>Développement d’API :</strong> création et gestion d’interfaces de communication pour échanger des données avec les partenaires et clients.</li>
-            <li><strong>Programmation en VB6 :</strong> mise en place d’alertes et automatisations pour améliorer les processus opérationnels.</li>
-            <li><strong>Création de macros Excel :</strong> optimisation des tâches administratives à l’aide de macros en VBA.</li>
-          </ul>
-        
-          <h3 class="eurodislog-subtitle">Une expérience formatrice</h3>
-          <p class="eurodislog-paragraph">
-            Mon expérience chez Eurodislog m’a permis de renforcer mes compétences en développement logiciel, en programmation d'API, et en gestion de projets techniques. Travailler dans cet environnement dynamique m’a également donné une vision claire des défis et des opportunités liés à la modernisation des processus logistiques.
-          </p>   
+        <p class="eurodislog-paragraph">
+          <strong>Eurodislog</strong> est une entreprise spécialisée dans la
+          logistique et les services d’approvisionnement. Elle accompagne ses
+          clients en leur proposant des solutions innovantes pour optimiser
+          leurs chaînes d’approvisionnement et améliorer leur efficacité
+          opérationnelle. Grâce à son expertise, Eurodislog se positionne comme
+          un acteur incontournable dans son secteur.
+        </p>
+
+        <h3 class="eurodislog-subtitle">Les forces d'Eurodislog</h3>
+        <p class="eurodislog-paragraph">Eurodislog se distingue par :</p>
+        <ul class="eurodislog-list">
+          <li>
+            <strong>Une intégration technologique avancée :</strong> utilisation
+            d'API et de solutions informatiques pour automatiser et optimiser
+            les processus logistiques.
+          </li>
+          <li>
+            <strong>Une expertise métier :</strong> une compréhension
+            approfondie des besoins spécifiques des entreprises en matière de
+            chaîne d'approvisionnement.
+          </li>
+          <li>
+            <strong>Une innovation constante :</strong> des outils et solutions
+            adaptés aux enjeux modernes de la logistique.
+          </li>
+        </ul>
+
+        <h3 class="eurodislog-subtitle">Mon rôle chez Eurodislog</h3>
+        <p class="eurodislog-paragraph">
+          En tant qu’alternant chez Eurodislog, je suis principalement impliqué
+          dans des projets de développement informatique, notamment :
+        </p>
+        <ul class="eurodislog-list">
+          <li>
+            <strong>Développement d’API :</strong> création et gestion
+            d’interfaces de communication pour échanger des données avec les
+            partenaires et clients.
+          </li>
+          <li>
+            <strong>Programmation en VB6 :</strong> mise en place d’alertes et
+            automatisations pour améliorer les processus opérationnels.
+          </li>
+          <li>
+            <strong>Création de macros Excel :</strong> optimisation des tâches
+            administratives à l’aide de macros en VBA.
+          </li>
+        </ul>
+
+        <h3 class="eurodislog-subtitle">Une expérience formatrice</h3>
+        <p class="eurodislog-paragraph">
+          Mon expérience chez Eurodislog m’a permis de renforcer mes compétences
+          en développement logiciel, en programmation d'API, et en gestion de
+          projets techniques. Travailler dans cet environnement dynamique m’a
+          également donné une vision claire des défis et des opportunités liés à
+          la modernisation des processus logistiques.
+        </p>
       </div>
     </div>
 
@@ -369,35 +421,64 @@
       <div class="modal-content">
         <span class="close">&times;</span>
         <h2>Détails sur le Baccalauréat STI2D</h2>
-          <p class="bac-paragraph">
-            Le <strong>Baccalauréat STI2D</strong> (Sciences et Technologies de l’Industrie et du Développement Durable) est une formation qui allie technologie, sciences de l’ingénieur et développement durable. L’option <strong>SIN</strong> (Systèmes d’Information et Numérique) met l’accent sur les technologies numériques et les systèmes d’information.
-          </p>
-        
-          <h3 class="bac-subtitle">Les points forts de la filière</h3>
-          <p class="bac-paragraph">
-            Cette option forme les étudiants à :
-          </p>
-          <ul class="bac-list">
-            <li><strong>Programmation :</strong> initiation à des langages comme le C, Arduino, et Python.</li>
-            <li><strong>Systèmes embarqués :</strong> étude et mise en œuvre de systèmes électroniques interconnectés.</li>
-            <li><strong>Création et gestion de projets numériques :</strong> conception de prototypes, développement de solutions numériques adaptées.</li>
-            <li><strong>Communication de données :</strong> exploration des protocoles de transmission comme le Bluetooth et le Wi-Fi.</li>
-          </ul>
-        
-          <h3 class="bac-subtitle">Les projets réalisés</h3>
-          <p class="bac-paragraph">
-            Durant cette formation, j’ai participé à plusieurs projets pratiques qui m’ont permis d’appliquer les notions théoriques, notamment :
-          </p>
-          <ul class="bac-list">
-            <li><strong>Conception de pages web :</strong> création de sites en HTML et CSS.</li>
-            <li><strong>Développement de systèmes interactifs :</strong> programmation et contrôle de dispositifs avec Arduino.</li>
-            <li><strong>Résolution de problématiques techniques :</strong> étude et optimisation de systèmes électroniques pour des cas concrets.</li>
-          </ul>
-        
-          <h3 class="bac-subtitle">Un tremplin vers l’avenir</h3>
-          <p class="bac-paragraph">
-            Cette formation m’a permis de découvrir et de développer une passion pour les technologies numériques et l’ingénierie. Elle a constitué une base solide pour mes études supérieures en informatique et mes projets professionnels.
-          </p>
+        <p class="bac-paragraph">
+          Le <strong>Baccalauréat STI2D</strong> (Sciences et Technologies de
+          l’Industrie et du Développement Durable) est une formation qui allie
+          technologie, sciences de l’ingénieur et développement durable.
+          L’option <strong>SIN</strong> (Systèmes d’Information et Numérique)
+          met l’accent sur les technologies numériques et les systèmes
+          d’information.
+        </p>
+
+        <h3 class="bac-subtitle">Les points forts de la filière</h3>
+        <p class="bac-paragraph">Cette option forme les étudiants à :</p>
+        <ul class="bac-list">
+          <li>
+            <strong>Programmation :</strong> initiation à des langages comme le
+            C, Arduino, et Python.
+          </li>
+          <li>
+            <strong>Systèmes embarqués :</strong> étude et mise en œuvre de
+            systèmes électroniques interconnectés.
+          </li>
+          <li>
+            <strong>Création et gestion de projets numériques :</strong>
+            conception de prototypes, développement de solutions numériques
+            adaptées.
+          </li>
+          <li>
+            <strong>Communication de données :</strong> exploration des
+            protocoles de transmission comme le Bluetooth et le Wi-Fi.
+          </li>
+        </ul>
+
+        <h3 class="bac-subtitle">Les projets réalisés</h3>
+        <p class="bac-paragraph">
+          Durant cette formation, j’ai participé à plusieurs projets pratiques
+          qui m’ont permis d’appliquer les notions théoriques, notamment :
+        </p>
+        <ul class="bac-list">
+          <li>
+            <strong>Conception de pages web :</strong> création de sites en HTML
+            et CSS.
+          </li>
+          <li>
+            <strong>Développement de systèmes interactifs :</strong>
+            programmation et contrôle de dispositifs avec Arduino.
+          </li>
+          <li>
+            <strong>Résolution de problématiques techniques :</strong> étude et
+            optimisation de systèmes électroniques pour des cas concrets.
+          </li>
+        </ul>
+
+        <h3 class="bac-subtitle">Un tremplin vers l’avenir</h3>
+        <p class="bac-paragraph">
+          Cette formation m’a permis de découvrir et de développer une passion
+          pour les technologies numériques et l’ingénierie. Elle a constitué une
+          base solide pour mes études supérieures en informatique et mes projets
+          professionnels.
+        </p>
       </div>
     </div>
 
