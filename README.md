@@ -143,7 +143,6 @@ techSelect.addEventListener("change", function () {
 - Réalisations -> Créer une visualisation interactive de vos compétences (par exemple, un graphique radar)
 - Réalisations -> un système de filtres plus avancé
 - Ajouter des effets de parallaxe subtils pour donner de la profondeur
-- Implémenter un système de retour en haut de page élégant
 - Système de changement de langue (français/anglais)
 - Plusieurs thèmes de couleurs personnalisables
 - Transformer certaines sections en composants React

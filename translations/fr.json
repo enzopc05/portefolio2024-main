@@ -95,17 +95,17 @@
       "rating": "Note",
       "source": "Source"
     },
-    "summary": {
-      "intro_title": "Introduction",
-      "intro_text": "Dans cette section, je vais présenter un résumé global de mon parcours, en expliquant les compétences que j'ai développées, les projets sur lesquels j'ai travaillé, et comment cette formation a contribué à mon développement personnel et professionnel.",
-      "skills_title": "Bilan des Compétences Acquises",
-      "projects_title": "Analyse des Projets Réalisés",
-      "projects_text": "Dans cette partie, j'analyse les principaux projets que j'ai réalisés durant ma formation :",
-      "experience_title": "Retour d'Expérience sur la Formation",
-      "experience_text": "Je discute ici de mon expérience globale de la formation : les aspects que j'ai le plus appréciés, les défis que j'ai surmontés, et comment cela m'a préparé pour la suite de ma carrière.",
-      "future_title": "Perspectives pour l'Avenir",
-      "future_text": "Je présente mes objectifs professionnels pour l'avenir, comment je compte continuer à développer mes compétences, et dans quel domaine je souhaite m'épanouir après la fin de cette formation."
-    },
+"summary": {
+  "intro_title": "Introduction",
+  "intro_text": "Dans cette section, je vais présenter un résumé global de mon parcours, en expliquant les compétences que j'ai développées, les projets sur lesquels j'ai travaillé, et comment cette formation a contribué à mon développement personnel et professionnel.",
+  "skills_title": "Bilan des Compétences Acquises",
+  "projects_title": "Analyse des Projets Réalisés",
+  "projects_text": "Dans cette partie, j'analyse les principaux projets que j'ai réalisés durant ma formation :",
+  "experience_title": "Retour d'Expérience sur la Formation",
+  "experience_text": "Je discute ici de mon expérience globale de la formation : les aspects que j'ai le plus appréciés, les défis que j'ai surmontés, et comment cela m'a préparé pour la suite de ma carrière.",
+  "future_title": "Perspectives pour l'Avenir",
+  "future_text": "Je présente mes objectifs professionnels pour l'avenir, comment je compte continuer à développer mes compétences, et dans quel domaine je souhaite m'épanouir après la fin de cette formation."
+},
     "footer": {
       "contact": "Contact",
       "quick_links": "Liens Rapides",
