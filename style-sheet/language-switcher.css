@@ -39,15 +39,24 @@ body.night-mode .language-button:hover {
   background-color: #3a8a8a;
 }
 
-/* Version responsive */
+/* Responsive pour le sélecteur de langue */
 @media (max-width: 768px) {
   .language-switcher {
-    margin-top: 10px;
+    position: absolute;
+    top: 10px;
+    right: 70px;
     margin-left: 0;
   }
 
   .language-button {
-    padding: 6px 10px;
     font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .language-switcher {
+    top: 60px;
+    right: 10px;
   }
 }

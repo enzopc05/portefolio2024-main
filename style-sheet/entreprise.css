@@ -1314,3 +1314,362 @@ body.night-mode .contact-modal .submit-button {
 body.night-mode .contact-modal .submit-button:hover {
   background-color: #3a8a8a;
 }
+
+/* ===== RESPONSIVE DESIGN COMPLET ===== */
+
+/* Grand écrans (1200px et +) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+
+  .company-layout {
+    gap: 40px;
+  }
+}
+
+/* Écrans moyens (992px à 1199px) */
+@media (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .company-layout {
+    gap: 30px;
+  }
+
+  .company-description {
+    width: 60%;
+  }
+
+  .company-info {
+    width: 40%;
+  }
+
+  .map-container {
+    max-width: 100%;
+    height: 250px;
+  }
+
+  .team-member {
+    width: 150px;
+  }
+}
+
+/* Tablettes et petits laptops (768px à 991px) */
+@media (max-width: 991px) {
+  .container {
+    max-width: 720px;
+  }
+
+  .logo-switcher {
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .logo-switcher button {
+    width: 180px;
+    height: 110px;
+  }
+
+  .company-layout {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .company-description,
+  .company-info {
+    width: 100%;
+  }
+
+  .company-info {
+    order: -1; /* Placer la carte au-dessus de la description */
+  }
+
+  .map-container {
+    max-width: 100%;
+    height: 300px;
+  }
+
+  .team-container {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  /* Ajustement du footer */
+  footer .container {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .footer-contact,
+  .footer-links,
+  .footer-social {
+    grid-column: auto;
+  }
+
+  .footer-bottom {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Smartphones en mode paysage et tablettes en portrait (576px à 767px) */
+@media (max-width: 767px) {
+  .container {
+    max-width: 540px;
+    padding: 0 15px;
+  }
+
+  body {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  /* Ajustement du header */
+  header {
+    padding: 15px 0;
+  }
+
+  header .container {
+    flex-direction: column;
+  }
+
+  .header-content {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .image-entete {
+    width: 60px;
+    height: 60px;
+  }
+
+  /* Ajustement de la navigation */
+  nav {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  nav ul li a {
+    font-size: 0.95rem;
+    padding: 6px 12px;
+  }
+
+  /* Positionnement des boutons thème et contact */
+  .theme-container,
+  .contact-button-container {
+    position: absolute;
+    top: 15px;
+  }
+
+  .theme-container {
+    right: 15px;
+  }
+
+  .contact-button-container {
+    right: 75px;
+  }
+
+  /* Ajustement des logos d'entreprises */
+  .logo-switcher {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    margin: 15px auto;
+  }
+
+  .logo-switcher button {
+    width: 80%;
+    max-width: 180px;
+    height: 100px;
+  }
+
+  /* Ajustement du contenu de l'entreprise */
+  .company-content {
+    padding: 15px;
+  }
+
+  .company-description h2 {
+    font-size: 1.5rem;
+  }
+
+  .map-container {
+    height: 250px;
+  }
+
+  .buttons-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .btn {
+    margin: 5px;
+  }
+
+  /* Ajustement de l'équipe */
+  .team-container {
+    gap: 10px;
+  }
+
+  .team-member {
+    width: 140px;
+    padding: 10px;
+  }
+
+  .member-avatar {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+
+  .member-name {
+    font-size: 0.9rem;
+  }
+
+  .member-role {
+    font-size: 0.8rem;
+  }
+
+  /* Ajustements du footer */
+  footer {
+    padding: 30px 0 15px;
+    margin-top: 30px;
+  }
+
+  footer .container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-contact h3::after,
+  .footer-links h3::after,
+  .footer-social h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .footer-contact p {
+    justify-content: center;
+  }
+
+  .footer-links ul li {
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+/* Smartphones en mode portrait (moins de 576px) */
+@media (max-width: 575px) {
+  .container {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  body {
+    padding: 0.5rem;
+    gap: 0.5rem;
+  }
+
+  /* Ajustement du header */
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .image-entete {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* Ajustement de la navigation */
+  nav ul {
+    gap: 5px;
+  }
+
+  nav ul li a {
+    font-size: 0.85rem;
+    padding: 5px 10px;
+  }
+
+  /* Ajustement des boutons */
+  .theme-toggle,
+  .contact-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Ajustement des logos d'entreprises */
+  .logo-switcher button {
+    width: 95%;
+    height: 90px;
+  }
+
+  /* Ajustement de l'équipe */
+  .team-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-member {
+    width: 80%;
+    max-width: 180px;
+    margin-bottom: 10px;
+  }
+
+  /* Ajustement des boutons */
+  .buttons-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+
+  /* Ajustement de la modale de contact */
+  .contact-modal-content {
+    width: 95%;
+    padding: 20px 15px;
+    margin: 15% auto;
+  }
+
+  .contact-modal .submit-button {
+    width: 100%;
+  }
+}
+
+/* Très petits écrans (moins de 375px) */
+@media (max-width: 374px) {
+  header h1 {
+    font-size: 1.3rem;
+  }
+
+  nav ul li a {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+  }
+
+  .company-description h2 {
+    font-size: 1.3rem;
+  }
+
+  .member-name {
+    font-size: 0.85rem;
+  }
+}

@@ -1677,3 +1677,596 @@ body.night-mode .contact-modal .submit-button {
 body.night-mode .contact-modal .submit-button:hover {
   background-color: #3a8a8a;
 }
+
+/* ===== RESPONSIVE DESIGN COMPLET POUR LA PAGE D'ACCUEIL ===== */
+
+/* Grand écrans (1200px et +) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+
+  .about-me {
+    gap: 40px;
+  }
+
+  .skills-container,
+  .tools-container {
+    gap: 25px;
+  }
+}
+
+/* Écrans moyens (992px à 1199px) */
+@media (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .about-me {
+    gap: 30px;
+    padding: 25px;
+  }
+
+  .profile-photo {
+    max-width: 130px;
+    height: 130px;
+  }
+
+  .about-me h2 {
+    font-size: 1.6rem;
+  }
+
+  .skills-container,
+  .tools-container {
+    gap: 20px;
+  }
+
+  .skill,
+  .tool {
+    width: 130px;
+    height: 130px;
+  }
+
+  #timeline-section ul.timeline {
+    width: 100%;
+  }
+}
+
+/* Tablettes et petits laptops (768px à 991px) */
+@media (max-width: 991px) {
+  .container {
+    max-width: 720px;
+  }
+
+  body {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  /* Ajustement de la section à propos */
+  .about-me {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .profile-photo {
+    margin-bottom: 20px;
+  }
+
+  .btn-cv {
+    margin-top: 15px;
+  }
+
+  /* Ajustement de la frise chronologique */
+  #timeline-section {
+    padding: 20px;
+  }
+
+  /* Ajustement des compétences */
+  #skills,
+  #tools {
+    padding: 20px;
+  }
+
+  #skills h2,
+  #tools h2 {
+    font-size: 1.5rem;
+  }
+
+  .skills-container,
+  .tools-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+  }
+
+  .skill,
+  .tool {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    padding: 15px 10px;
+  }
+
+  /* Ajustement des modales */
+  .modal-content {
+    width: 90%;
+    max-width: 650px;
+    padding: 25px;
+    margin: 10% auto;
+  }
+
+  /* Ajustement du footer */
+  footer .container {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .footer-contact,
+  .footer-links,
+  .footer-social {
+    grid-column: auto;
+  }
+
+  .footer-bottom {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Smartphones en mode paysage et tablettes en portrait (576px à 767px) */
+@media (max-width: 767px) {
+  .container {
+    max-width: 540px;
+    padding: 0 15px;
+  }
+
+  body {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  /* Ajustement du header */
+  header {
+    padding: 15px 0;
+  }
+
+  header .container {
+    flex-direction: column;
+  }
+
+  .header-content {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .image-entete {
+    width: 60px;
+    height: 60px;
+  }
+
+  /* Ajustement de la navigation */
+  nav {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  nav ul li a {
+    font-size: 0.95rem;
+    padding: 6px 12px;
+  }
+
+  /* Positionnement des boutons thème et contact */
+  .theme-container,
+  .contact-button-container {
+    position: absolute;
+    top: 15px;
+  }
+
+  .theme-container {
+    right: 15px;
+  }
+
+  .contact-button-container {
+    right: 75px;
+  }
+
+  /* Ajustement de la section à propos */
+  .about-me {
+    padding: 20px;
+  }
+
+  .about-me h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-me p {
+    font-size: 0.95rem;
+  }
+
+  .profile-photo {
+    max-width: 120px;
+    height: 120px;
+  }
+
+  /* Ajustement de la timeline */
+  #timeline-section {
+    padding: 20px;
+  }
+
+  #timeline-section ul.timeline {
+    --col-gap: 1rem;
+    --row-gap: 1.5rem;
+  }
+
+  #timeline-section ul.timeline li .date {
+    font-size: 1.1rem;
+  }
+
+  /* Ajustement des compétences */
+  #skills,
+  #tools {
+    padding: 20px;
+  }
+
+  #skills h2,
+  #tools h2 {
+    font-size: 1.4rem;
+  }
+
+  .skills-container,
+  .tools-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Ajustement des modales */
+  .modal-content {
+    width: 95%;
+    padding: 20px;
+    margin: 15% auto;
+  }
+
+  .modal h2 {
+    font-size: 1.5rem;
+  }
+
+  .description,
+  .details,
+  .subheading,
+  .closing {
+    font-size: 0.95rem;
+  }
+
+  .skills-list {
+    padding-left: 15px;
+  }
+
+  /* Ajustements du footer */
+  footer {
+    padding: 30px 0 15px;
+    margin-top: 30px;
+  }
+
+  footer .container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-contact h3::after,
+  .footer-links h3::after,
+  .footer-social h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .footer-contact p {
+    justify-content: center;
+  }
+
+  .footer-links ul li {
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  /* Ajustement de la modale de contact */
+  .contact-modal-content {
+    width: 95%;
+    padding: 20px;
+  }
+}
+
+/* Smartphones en mode portrait (moins de 576px) */
+@media (max-width: 575px) {
+  .container {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  body {
+    padding: 0.5rem;
+    gap: 0.5rem;
+  }
+
+  /* Ajustement du header */
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .image-entete {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* Ajustement de la navigation */
+  nav ul {
+    gap: 5px;
+  }
+
+  nav ul li a {
+    font-size: 0.85rem;
+    padding: 5px 10px;
+  }
+
+  /* Ajustement des boutons */
+  .theme-toggle,
+  .contact-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Ajustement de la section à propos */
+  .about-me {
+    padding: 15px;
+  }
+
+  .about-me h2 {
+    font-size: 1.4rem;
+  }
+
+  .about-me p {
+    font-size: 0.9rem;
+  }
+
+  .btn-cv {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  /* Ajustement de la timeline */
+  #timeline-section {
+    padding: 15px;
+  }
+
+  #timeline-section ul.timeline {
+    --line-w: 0.2rem;
+    --col-gap: 0.8rem;
+    --row-gap: 1.2rem;
+    width: 100%;
+  }
+
+  #timeline-section ul.timeline li .date {
+    --dateH: 2.5rem;
+    font-size: 1rem;
+  }
+
+  #timeline-section ul.timeline li .title {
+    font-size: 0.95rem;
+  }
+
+  #timeline-section ul.timeline li .descr {
+    font-size: 0.85rem;
+  }
+
+  /* Transformer timeline en une seule colonne pour mobile */
+  #timeline-section ul.timeline {
+    grid-template-columns: var(--line-w) 1fr;
+  }
+
+  #timeline-section ul.timeline li:nth-child(odd),
+  #timeline-section ul.timeline li:nth-child(even) {
+    grid-column: 2;
+  }
+
+  #timeline-section ul.timeline li:nth-child(odd) .date::after {
+    transform: translate(50%, -50%);
+    right: calc(100% + var(--col-gap) + var(--line-w) / 2);
+    left: auto;
+  }
+
+  #timeline-section ul.timeline li:nth-child(odd) .date {
+    border-radius: calc(var(--dateH) / 2) 0 0 calc(var(--dateH) / 2);
+  }
+
+  #timeline-section ul.timeline li:nth-child(odd) .date::before {
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    left: auto;
+    right: 0;
+  }
+
+  /* Ajustement des sections compétences */
+  #skills,
+  #tools {
+    padding: 15px;
+  }
+
+  #skills h2,
+  #tools h2 {
+    font-size: 1.3rem;
+  }
+
+  .skills-container,
+  .tools-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .skill,
+  .tool {
+    padding: 10px;
+  }
+
+  .skill img,
+  .tool img,
+  .skill i,
+  .tool i {
+    max-width: 40px;
+    height: 40px;
+    font-size: 40px;
+  }
+
+  .skill p,
+  .tool p {
+    font-size: 0.85rem;
+    margin-top: 5px;
+  }
+
+  /* Ajustement des modales */
+  .modal-content {
+    padding: 15px;
+    margin: 10% auto;
+  }
+
+  .modal h2 {
+    font-size: 1.3rem;
+  }
+
+  .modal h3 {
+    font-size: 1.1rem;
+  }
+
+  .close {
+    font-size: 1.5rem;
+    top: 5px;
+    right: 10px;
+  }
+
+  /* Ajustement de la modale de contact */
+  .contact-modal-content {
+    padding: 15px;
+  }
+
+  .contact-modal .form-group {
+    gap: 5px;
+  }
+
+  .contact-modal label {
+    font-size: 0.9rem;
+  }
+
+  .contact-modal .submit-button {
+    width: 100%;
+  }
+}
+
+/* Très petits écrans (moins de 375px) */
+@media (max-width: 374px) {
+  header h1 {
+    font-size: 1.3rem;
+  }
+
+  nav ul li a {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+  }
+
+  .about-me h2 {
+    font-size: 1.2rem;
+  }
+
+  .about-me p {
+    font-size: 0.85rem;
+  }
+
+  .profile-photo {
+    max-width: 100px;
+    height: 100px;
+  }
+
+  .btn-cv {
+    padding: 8px 15px;
+    font-size: 0.85rem;
+  }
+
+  #skills h2,
+  #tools h2 {
+    font-size: 1.2rem;
+  }
+
+  .skill p,
+  .tool p {
+    font-size: 0.8rem;
+  }
+
+  /* Ajuster les modales pour très petits écrans */
+  .modal h2 {
+    font-size: 1.2rem;
+  }
+
+  .modal p,
+  .modal li {
+    font-size: 0.85rem;
+  }
+}
+
+/* Modifications spécifiques pour le mode paysage sur mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .modal-content {
+    margin: 5% auto;
+    max-height: 85vh;
+    overflow-y: auto;
+  }
+
+  #timeline-section ul.timeline {
+    width: 95%;
+  }
+
+  .skills-container,
+  .tools-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Optimisations de performance pour les animations et transitions */
+@media (prefers-reduced-motion: reduce) {
+  .about-me,
+  .profile-photo,
+  .skill,
+  .tool,
+  .btn-cv,
+  .header-content .image-entete,
+  .team-member,
+  nav ul li a,
+  .theme-toggle,
+  .contact-button {
+    transition: none !important;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  .header-content:hover .image-entete,
+  .about-me:hover,
+  .about-me:hover .profile-photo,
+  #skills:hover,
+  #tools:hover,
+  .skill:hover,
+  .tool:hover,
+  .skill:hover img,
+  .tool:hover img,
+  .btn-cv:hover {
+    transform: none !important;
+  }
+}
